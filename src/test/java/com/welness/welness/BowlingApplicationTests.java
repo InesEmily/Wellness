@@ -1,4 +1,4 @@
-package com.bowling.bowling;
+package com.welness.welness;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
