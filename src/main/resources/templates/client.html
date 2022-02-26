@@ -11,12 +11,19 @@
     <title>Client</title>
 </head>
 <body>
+<div th:replace="fragments/header :: header">Header</div>
 <main>
-    <h2>Client details</h2>
+    <a class="prevButton" th:if="${client.getId}>1" th:href="@{${client.getId()-1}}" th:text="'<'"></a>
+    <a class="prevButton" th:if="${client.getId}==1" th:href="@{${endOfList}}" th:text="'<'"></a>
+
+    <a class="NextButton" th:if="${client.getId}<${endOfList}" th:href="@{${client.getId()+1}}"
+       th:text="'>'"></a>
+    <a class="NextButton" th:if="${client.getId}==${endOfList}" th:href="@{1}" th:text="'>'"></a>
     <div class="container">
         <div class="row">
             <!-- hier test je of venue niet gelijk is aan null ( is er een waarde aanwezig) -->
             <div class="Kolom2" th:if="${client}">
+
 
                 <h2 th:text="|${client.getName()} ${client.getLastName()}|">client</h2>
                 <p th:text="|Gender :${client.getGender()}|">client</p>

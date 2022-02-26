@@ -21,6 +21,8 @@ public class ClientController {
 
         if (clientFromDb.isPresent()) {
             model.addAttribute("client", clientFromDb.get());
+            long endOflist = clientRepository.count();
+            model.addAttribute("endOfList",endOflist);
         }
         return "client";
     }

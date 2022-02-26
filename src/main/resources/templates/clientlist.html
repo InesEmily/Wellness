@@ -14,7 +14,7 @@
     <div class="clientTabel">
     <h2>Clients</h2>
     <button type="button" class="btn btn-default" th:each="client: ${allclient}">
-        <a th:href="@{|/clientslist/${client.id}|}"
+        <a th:href="@{|/client/${client.id}|}"
            th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
     </button>
     </div>
