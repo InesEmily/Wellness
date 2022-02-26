@@ -11,8 +11,28 @@
     <title>Client</title>
 </head>
 <body>
-<h2 th:text="${client.getName()}" th:text="${client.getLastName()}"></h2>
-<p th:text="${client.getBirthday()}"></p>
+<main>
+    <h2>Client details</h2>
+    <div class="container">
+        <div class="row">
+            <!-- hier test je of venue niet gelijk is aan null ( is er een waarde aanwezig) -->
+            <div class="Kolom2" th:if="${client}">
+
+                <h2 th:text="|${client.getName()} ${client.getLastName()}|">client</h2>
+                <p th:text="|Gender :${client.getGender()}|">client</p>
+                <p th:text="|Birthday :${client.getBirthday()}|"></p>
+                <p th:text="|Phone number :${client.getPhoneNumber()}|"></p>
+                <p th:text="|E-mail :${client.getEmail()}|"></p>
+                <p th:text="|Adress :${client.getAdres()}|"></p>
+
+            </div>
+            <div class="kolom2" th:unless="${client}">
+                <h2>No client has been chosen</h2>
+            </div>
+        </div>
+    </div>
+</main>
+
 
 </body>
 </html>

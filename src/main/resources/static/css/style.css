@@ -1,3 +1,23 @@
 body{
-    background-color: red;
+    background-color: white;
+}
+main{
+    background-color: #e0ffff;
+}
+button.btn-default{
+    display: block;
+    background: white;
+    margin: 10px auto;
+    width: 400px;
+    font-size: 1.2em;
+    padding: 1em;
+    text-align: center;
+    align-content: center;
+}
+.clientTabel{
+    align-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

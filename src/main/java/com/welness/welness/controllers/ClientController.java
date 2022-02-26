@@ -16,12 +16,19 @@ public class ClientController {
 
     @GetMapping({"/client","/client/{id}"})
     public String client(Model model, @PathVariable(required = false)Integer id){
+        if (id == null) return "client";
         Optional<Client> clientFromDb = clientRepository.findById(id);
 
         if (clientFromDb.isPresent()) {
             model.addAttribute("client", clientFromDb.get());
         }
         return "client";
+    }
+    @GetMapping({"/clientlist"})
+    public String clienstlist(Model model){
+        final Iterable<Client> allClient = clientRepository.findAll();
+        model.addAttribute("allclient", allClient);
+        return "clientlist";
     }
 
 }
