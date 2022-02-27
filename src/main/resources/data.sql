@@ -19,10 +19,10 @@ INSERT INTO "PUBLIC"."CLIENT" VALUES
 INSERT INTO "PUBLIC"."CLIENT" VALUES
     (10, 'vismarkt 15,2800 Mechelen', '1996-11-13', 'Verlinden_Mieke@gmail.com', 'F','Verlinden', 'Mieke', 0478495049);
 INSERT INTO "PUBLIC"."ROOM" VALUES
-    (1, 20, 'room with blablabla', 'Mozaïk room');
+    (1, 20, 'Kom tot rust in het stijlvolle interieur van de Mozaïk sauna. De veelvuldige waterstralen van zwembad en jacuzzi zorgen voor een totale ontspanning.', 'Mozaïk room');
 INSERT INTO "PUBLIC"."ROOM" VALUES
-    (2, 20, 'room with blablabla', 'Color room');
+    (2, 20, 'Geniet van het saunagebeuren in de moderne Color sauna waar kleur centraal staat. Je wordt er als het ware ondergedompeld in een regenboog van kleuren.', 'Color room');
 INSERT INTO "PUBLIC"."ROOM" VALUES
-    (3, 15, 'room with blablabla', 'Greek room');
+    (3, 15, '“Mens sana in corpore sano!”Het interieur van de Greek sauna doet met zijn zuilen en borstbeelden de klassieke Oudheid herleven.', 'Greek room');
 INSERT INTO "PUBLIC"."ROOM" VALUES
-    (4, 4, 'room with blablabla', 'white room');
+    (4, 4, 'Geniet van een glaasje champagne voor de open haard of van de sauna, hammam, jacuzzi en verwarmd zwembad die gezellig binnen zijn gelegen,', 'white room');
