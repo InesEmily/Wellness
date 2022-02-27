@@ -9,13 +9,15 @@ public class Room {
     private Integer id;
     private String name;
     private String description;
+    private Integer capacity;
 
     public Room() {
     }
 
-    public Room(String name, String description) {
+    public Room(String name, String description, Integer capacity) {
         this.name = name;
         this.description = description;
+        this.capacity = capacity;
     }
 
     public Integer getId() {
@@ -28,5 +30,9 @@ public class Room {
 
     public String getDescription() {
         return description;
+    }
+
+    public Integer getCapacity() {
+        return capacity;
     }
 }

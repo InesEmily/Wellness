@@ -18,3 +18,11 @@ INSERT INTO "PUBLIC"."CLIENT" VALUES
     (9, 'fonteinstraat 28,3000 Leuven', '1998-08-01', 'Gillis_Maartena@gmail.com', 'M','Gillis', 'Maarten', 0478445049);
 INSERT INTO "PUBLIC"."CLIENT" VALUES
     (10, 'vismarkt 15,2800 Mechelen', '1996-11-13', 'Verlinden_Mieke@gmail.com', 'F','Verlinden', 'Mieke', 0478495049);
+INSERT INTO "PUBLIC"."ROOM" VALUES
+    (1, 20, 'room with blablabla', 'Mozaïk room');
+INSERT INTO "PUBLIC"."ROOM" VALUES
+    (2, 20, 'room with blablabla', 'Color room');
+INSERT INTO "PUBLIC"."ROOM" VALUES
+    (3, 15, 'room with blablabla', 'Greek room');
+INSERT INTO "PUBLIC"."ROOM" VALUES
+    (4, 4, 'room with blablabla', 'white room');
