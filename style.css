@@ -1,0 +1,159 @@
+body{
+    background-color: white;
+    margin: 0%;
+}
+main{
+    background-color: #e0ffff;
+}
+button.btn-default{
+    display: block;
+    background: white;
+    margin: 10px auto;
+    width: 400px;
+    font-size: 1.2em;
+    padding: 1em;
+    text-align: center;
+    align-content: center;
+}
+.clientTabel{
+    align-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.prevButton{
+    padding-left: 2px;
+    padding-right: 2px;
+    float: left;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.NextButton{
+    padding-left: 2px;
+    padding-right: 2px;
+    float: right;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: white;
+
+}
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 360px;
+    left: -5px;
+
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+.navbartj{
+    display: inline-block;
+    background: white;
+    margin-right: 5px;
+    padding: 5px;
+    text-align: center;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #242424; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: transparent;
+    color: #242424;
+    padding: 12px 20px;
+    border: solid;
+    border-width: 1px;
+    border-color: #242424 ;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+
+    header video {
+        display: none;
+    }
+}
+
