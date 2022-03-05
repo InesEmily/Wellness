@@ -1,0 +1,51 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/style.css}" href="../css/style.css"/>
+    <!--        <link rel="stylesheet" href="../css/fontawesome.min.css">-->
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
+    <title>Contacts</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+<div id="contact" class="hiw_section layout_padding" style="background: #eeefef;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h3>Booking Online</h3>
+            </div>
+            <div class="col-md-5">
+            </div>
+        </div>
+        <div class="contact-form">
+            <div class="container">
+                <form action="mailto:inesemilymertens@gmail.com" method="post" enctype="text/plain">
+                    <label for="fname">Voornaam</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Je voornaam..">
+                    <label for="lname">Achternaam</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Je achternaam..">
+                    <label for="mail">E-mail</label>
+                    <input type="text" id="mail" name="Email" placeholder="Jouw e-mail...">
+                    </select>
+                    <label for="subject">Onderwerp</label>
+                    <textarea id="subject" name="subject" placeholder="Schrijf iets.." style="height:200px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div th:replace="fragments/footer :: footer">footer</div>
+</footer>
+
+</body>
+</html>

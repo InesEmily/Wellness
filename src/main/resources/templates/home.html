@@ -16,45 +16,7 @@
     <title>Zensational</title>
 </head>
 <body>
-<div id="header" class="header">
-    <nav class="navbar navbar-expand-lg navbar-light text-capitalize">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="../imgs/Blauw%20Lotus%20Massage%20Logo.png" alt="#"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="show-menu">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#service">Rooms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hiw">Client list</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#clientOpinion">What Clients Say</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item .search-container">
-                        <a class="nav-link search" href="#"><i class="fas fa-search"></i></a>
-                        <form>
-                            <input type="search" placeholder="Search">
-                        </form>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
+<div th:replace="fragments/header :: header">Header</div>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -241,79 +203,36 @@
     </div>
 </div>
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="footer_blog_section">
-                    <img src="imgs/Blauw%20Lotus%20Massage%20Logo.png" alt="#"/>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-12">
-                <div class="item">
-                    <h4 class="text-uppercase">Navigation</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Features</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="item">
-                    <h4 class="text-uppercase">Contact Info</h4>
-                    <p><strong>Corporate Office Address:</strong></p>
-                    <p><img src="imgs/phone_icon.png" alt="#"/> 1234 River Street New York, NY 36524</p>
-                    <p><strong>Customer Service:</strong></p>
-                    <p><img src="imgs/location.png" alt="#"/> 987 654 3210</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="item">
-                    <h4 class="text-uppercase">Discover</h4>
-                    <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Subscribe</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright text-center">
-        <p>Copyright 2022 Design by Ines</p>
-    </div>
+    <div th:replace="fragments/footer :: footer">footer</div>
 </footer>
-<script src="../js/jquery-3.3.1.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
-    $(function () {
-
-        'use strict';
-
-        var winH = $(window).height();
-
-        $('header').height(winH);
-
-        $('header .container > div').css('top', (winH / 2) - ($('header .container > div').height() / 2));
-
-        $('.navbar ul li a.search').on('click', function (e) {
-            e.preventDefault();
-        });
-        $('.navbar a.search').on('click', function () {
-            $('.navbar form').fadeToggle();
-        });
-
-        $('.navbar ul.navbar-nav li a').on('click', function (e) {
-
-            var getAttr = $(this).attr('href');
-
-            e.preventDefault();
-            $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
-        });
-    })
+    // $(function () {
+    //
+    //     'use strict';
+    //
+    //     var winH = $(window).height();
+    //
+    //     $('header').height(winH);
+    //
+    //     $('header .container > div').css('top', (winH / 2) - ($('header .container > div').height() / 2));
+    //
+    //     $('.navbar ul li a.search').on('click', function (e) {
+    //         e.preventDefault();
+    //     });
+    //     $('.navbar a.search').on('click', function () {
+    //         $('.navbar form').fadeToggle();
+    //     });
+    //
+    //     $('.navbar ul.navbar-nav li a').on('click', function (e) {
+    //
+    //         var getAttr = $(this).attr('href');
+    //
+    //         e.preventDefault();
+    //         $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+    //     });
+    // })
 </script>
 </body>
 </html>

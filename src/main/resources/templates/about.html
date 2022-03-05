@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/style.css}" href="../css/style.css"/>
+    <!--        <link rel="stylesheet" href="../css/fontawesome.min.css">-->
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
+    <title>About</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+<div id="about" class="about_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h4>OVER ZENSATIONAL</h4>
+                <h3 style="text-transform: none !important">We Work for Your Comfort</h3>
+                <p>Wil je even ontsnappen aan alle stress en drukte, én het gevoel hebben dat de luxe waarin je baadt
+                    enkel en alleen voor jou bestemd is? Dan kan je bij ZenSational terecht! Dit relaxadresje in het
+                    landelijke en rustige Pulderbos staat voor pure verwennerij in stijl. Ideaal om met je partner, kids
+                    of familie een paar uur te onthaasten in een gloednieuw interieur.</p>
+            </div>
+            <div class="col-md-6 offset-md-1">
+                <div class="full text_align_center">
+                    <img class="img-responsive" src="imgs/about.png" alt="#"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div th:replace="fragments/footer :: footer">footer</div>
+</footer>
+
+</body>
+</html>

@@ -3,18 +3,29 @@
       xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" media="all"
-        th:href="@{/css/style.css}" href="/css/style.css"/>
-  <link rel="stylesheet" type="text/css" media="all"
-        th:href="@{/css/style.css}" href="/css/bootstrap.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/style.css}" href="../css/style.css"/>
+    <!--        <link rel="stylesheet" href="../css/fontawesome.min.css">-->
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
     <title>Room</title>
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
-<h2 th:text="${room.get().getName()}"></h2>
-<p th:text="${room.get().getCapacity()}"></p>
-<p th:text="${room.get().getDescription()}"></p>
+<main>
+
+    <h2 th:text="${room.get().getName()}"></h2>
+    <p th:text="${room.get().getCapacity()}"></p>
+    <p th:text="${room.get().getDescription()}"></p>
+</main>
+
+<footer>
+    <div th:replace="fragments/footer :: footer">footer</div>
+</footer>
 
 </body>
 </html>

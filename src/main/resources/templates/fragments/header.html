@@ -4,22 +4,59 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="all"
-          th:href="@{../css/style.css}" href="/css/style.css"/>
+          th:href="@{../css/style.css}" href="../css/style.css"/>
+    <!--        <link rel="stylesheet" href="../css/fontawesome.min.css">-->
     <link rel="stylesheet" type="text/css" media="all"
-          th:href="@{../css/bootstrap.min.css}" href="/css/bootstrap.min.css"/>
+          th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" media="all"
-          th:href="@{../css/home.css}" href="/css/home.css"/>
+          th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
 
     <title>Header</title>
 </head>
 <body>
-<div class="nav" th:fragment="header">
-    <img src="../img/H.png">
-    <div class="navbartj"><a th:href="@{/}">home</a></div>
-    <div class="navbartj"><a th:href="@{/roomlist}">roomlist</a></div>
-    <div class="navbartj"><a th:href="@{/clientlist}">client list</a> </div>
-
+<div class="nav" id="header" th:fragment="header">
+        <nav class="navbar navbar-expand-lg navbar-light text-capitalize">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="../imgs/Blauw%20Lotus%20Massage%20Logo.png" alt="#"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="show-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/about}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/roomlist}">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/tarieven}">Tarieven</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/clientssay}">What Clients Say</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/contact}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/clientlist}">Clientlist</a>
+                        </li>
+                        <li class="nav-item .search-container">
+                            <a class="nav-link search" href="#"><i class="fas fa-search"></i></a>
+                            <form>
+                                <input type="search" placeholder="Search">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 </div>
 </body>
 </html>

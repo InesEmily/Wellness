@@ -12,22 +12,28 @@
           th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
-    <title>Clientlist</title>
+    <title>Tarieven</title>
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
-<main>
-    <div class="clientTabel">
-        <h2>Clients</h2>
-        <div class="form-outline">
-           <span th:text="min"></span><input type="search" id="form1" class="form-control" placeholder="0" aria-label="Search" /><span th:text="persons"></span>
+<div id="hiw" class="hiw_section layout_padding">
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <h3>Onze Tarieven</h3>
+            <h4>Privé wellness</h4>
+            <p>2 uur voor 2 personen: 120€</p>
+            <p>3 uur voor 2 personen: 170€</p>
+            <p>Groepen van min. 8 personen: 300€ voor 2u welness</p>
+            <p>Vanaf het 3e uur: 50€ per uur</p>
+            <p> Voor elke bijkomende persoon: 20€ per uur</p>
+            <p> Na middernacht: 10€ per persoon extra per uur</p>
+            <p> Kinderen onder 6 jaar: gratis</p>
+            <p>Kinderen onder 6 - 12 jaar: 7,5€ per uur</p>
         </div>
-        <button type="button" class="btn btn-default" th:each="client: ${allclient}">
-            <a th:href="@{|/client/${client.id}|}"
-               th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
-        </button>
     </div>
-</main>
+</div>
+</div>
 
 <footer>
     <div th:replace="fragments/footer :: footer">footer</div>
