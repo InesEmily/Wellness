@@ -5,18 +5,21 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" media="all"
-          th:href="@{/css/style.css}" href="/css/style.css"/>
+          th:href="@{../css/style.css}" href="/css/style.css"/>
     <link rel="stylesheet" type="text/css" media="all"
-          th:href="@{/css/bootstrap.min.css}" href="/css/bootstrap.min.css"/>
+          th:href="@{../css/bootstrap.min.css}" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/home.css}" href="/css/home.css"/>
 
     <title>Header</title>
 </head>
 <body>
 <div class="nav" th:fragment="header">
+    <img src="../img/H.png">
     <div class="navbartj"><a th:href="@{/}">home</a></div>
     <div class="navbartj"><a th:href="@{/roomlist}">roomlist</a></div>
     <div class="navbartj"><a th:href="@{/clientlist}">client list</a> </div>
-    <div class="navbartj"><a th:href="@{/artistlist}">artistlist</a></div>
+
 </div>
 </body>
 </html>
