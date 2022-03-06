@@ -27,4 +27,16 @@ public class HomeController {
     public String contact(){
         return "contact";
     }
+    @GetMapping({"/publicsauna"})
+    public String publicsauna(){
+        return "publicsauna";
+    }
+    @GetMapping({"/publicwellness"})
+    public String publicwellness(){
+        return "publicwellness";
+    }
+    @GetMapping({"/viproom"})
+    public String viproom(){
+        return "viproom";
+    }
 }

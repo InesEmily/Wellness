@@ -14,7 +14,7 @@
           th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
     <!--        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">-->
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
@@ -32,7 +32,7 @@
                 <h2>Publieke Wellness</h2>
                 <h4>Anavrin room</h4>
                 <p>Anarvin of achteruitgeschreven : Nirvana is onze publieke wellness met buitenzwembad</p>
-                <a class="yellow_bt" href="#">Meer info</a>
+                <a class="yellow_bt" th:href="@{/publicwellness}">Meer info</a>
             </div>
         </div>
         <div class="carousel-item">
@@ -41,7 +41,7 @@
                 <h2>Publieke Sauna</h2>
                 <h4>Hotpot Room</h4>
                 <p>Wij hebben een grote publieke sauna met opgietsessies van een opgietmeester</p>
-                <a class="yellow_bt" href="#">Meer info</a>
+                <a class="yellow_bt" th:href="@{/publicsauna}">Meer info</a>
             </div>
         </div>
         <div class="carousel-item">
@@ -51,7 +51,7 @@
                 <h4>Golden Room</h4>
                 <p>Kom tot rust in deze luxueze gouden wellness, de golden room heeft een mogelijkheid tot
                     overnachting</p>
-                <a class="yellow_bt" href="#">Meer info</a>
+                <a class="yellow_bt" th:href="@{/viproom}">Meer info</a>
             </div>
         </div>
     </div>
