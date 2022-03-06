@@ -17,12 +17,16 @@
 <body>
 <div th:replace="fragments/header :: header">Header</div>
 <main>
-    <a class="prevButton" th:if="${client.getId}>1" th:href="@{${client.getId()-1}}" th:text="'<'"></a>
-    <a class="prevButton" th:if="${client.getId}==1" th:href="@{${endOfList}}" th:text="'<'"></a>
-
-    <a class="NextButton" th:if="${client.getId}<${endOfList}" th:href="@{${client.getId()+1}}"
-       th:text="'>'"></a>
-    <a class="NextButton" th:if="${client.getId}==${endOfList}" th:href="@{1}" th:text="'>'"></a>
+    <div class="client">
+    <div class="prevButtonDiv">
+        <a class="buttonLook smallButton" th:if="${client.getId}>1" th:href="@{${client.getId()-1}}" th:text="'<'"></a>
+        <a class="buttonLook smallButton" th:if="${client.getId}==1" th:href="@{${endOfList}}" th:text="'<'"></a>
+    </div>
+    <div class="nextButtonDiv">
+        <a class="buttonLook smallButton" th:if="${client.getId}<${endOfList}" th:href="@{${client.getId()+1}}"
+           th:text="'>'"></a>
+        <a class="buttonLook smallButton" th:if="${client.getId}==${endOfList}" th:href="@{1}" th:text="'>'"></a>
+    </div>
     <div class="container">
         <div class="row">
             <!-- hier test je of venue niet gelijk is aan null ( is er een waarde aanwezig) -->
@@ -41,6 +45,7 @@
                 <h2>No client has been chosen</h2>
             </div>
         </div>
+    </div>
     </div>
 </main>
 <footer>

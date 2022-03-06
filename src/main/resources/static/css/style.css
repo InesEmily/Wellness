@@ -1266,9 +1266,29 @@ a.mediumButton {
     font-size: 1.2em;
     padding: 1em;
 }
+a.smallButton {
+    display: block;
+    font-size: 1em;
+    padding: 0.5em;
+}
 .achtergrondTarieven{
     background-image: url("../imgs/white_room.jpg");
     color: white;
+}
+.prevButtonDiv {
+    position: fixed;
+    left: 10px;
+    top: 200px;
+}
+
+.nextButtonDiv {
+    position: fixed;
+    right: 10px;
+    top: 200px;
+
+}
+.client{
+    margin: 10px;
 }
 
 
