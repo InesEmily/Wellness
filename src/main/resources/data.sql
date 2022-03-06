@@ -25,4 +25,4 @@ INSERT INTO "PUBLIC"."ROOM" VALUES
 INSERT INTO "PUBLIC"."ROOM" VALUES
     (3, 15, '“Mens sana in corpore sano!”Het interieur van de Greek sauna doet met zijn zuilen en borstbeelden de klassieke Oudheid herleven.', 'Greek room');
 INSERT INTO "PUBLIC"."ROOM" VALUES
-    (4, 4, 'Geniet van een glaasje champagne voor de open haard of van de sauna, hammam, jacuzzi en verwarmd zwembad die gezellig binnen zijn gelegen,', 'white room');
+    (4, 4, 'Geniet van een glaasje champagne voor de open haard of van de sauna, hammam, jacuzzi en verwarmd zwembad die gezellig binnen zijn gelegen,', 'White room');

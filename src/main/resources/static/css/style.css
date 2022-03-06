@@ -163,7 +163,8 @@ p {
 .full {
     width: 100%;
     float: left;
-    margin: 0;
+    margin: 30px;
+
 }
 
 .text_align_center {
@@ -413,7 +414,7 @@ h3.blog_head {
     padding: 5px;
 }
 
-.blue_bt {
+.yellow_bt {
     width: 255px;
     height: 58px;
     background: #fcf8e3;
@@ -425,8 +426,8 @@ h3.blog_head {
     font-weight: 300;
 }
 
-.blue_bt:hover,
-.blue_bt:focus {
+.yellow_bt:hover,
+.yellow_bt:focus {
     background: #fff;
     color: #0c2326;
 }
@@ -881,10 +882,13 @@ footer .copyright p {
 
 
 .testimonial_blog {
-    background: #a1a1a1;
+    background: #0c2326;
     width: 100%;
     padding: 40px 50px;
-    box-shadow: 50px 50px 0 0 gold;
+    box-shadow: 50px 50px 0 0 #fcf8e3;
+}
+.testimonial_blog h1{
+    color: gold;
 }
 
 .testimonial_blog p {

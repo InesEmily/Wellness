@@ -18,10 +18,15 @@
 <body>
 <div th:replace="fragments/header :: header">Header</div>
 <main>
-
-    <h2 th:text="${room.get().getName()}"></h2>
-    <p th:text="${room.get().getCapacity()}"></p>
-    <p th:text="${room.get().getDescription()}"></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+            <h2 th:text="${room.get().getName()}"></h2>
+            <p th:text="|Capaciteit voor ${room.get().getCapacity()} personen|"></p>
+            <p th:text="${room.get().getDescription()}"></p>
+        </div>
+    </div>
+    </div>
 </main>
 
 <footer>
