@@ -1212,7 +1212,7 @@ footer .item h4 {
     }
 
     .subcribe form button {
-        background: #fa3e19;
+        background: gold;
         color: #fff;
         width: 100%;
         border: none;
@@ -1236,22 +1236,39 @@ footer .item h4 {
 
 }
 
-.button.btn-default{
+.table-client{
     display: inline-block;
-    background: white;
+    width: 50%;
+    align-content: center;
+}
+
+a.buttonLook {
+    display: block;
+    background-color: #fcf8e3;
+    color: gold;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 1px 1px 1px darkgrey;
+}
+
+a.buttonLook:hover {
+    background-color: #0c2326;
+    color: gold;
+}
+
+a.buttonLook:active {
+    background-color: gold;
+    color: #0c2326;
+}
+a.mediumButton {
     margin: 10px auto;
     width: 400px;
     font-size: 1.2em;
     padding: 1em;
-    text-align: center;
-    align-content: center;
 }
-.clientTabel{
-    align-content: center;
-}
-a{
-    text-decoration: none;
-    color: black;
+.achtergrondTarieven{
+    background-image: url("../imgs/white_room.jpg");
+    color: white;
 }
 
 
