@@ -1,7 +1,7 @@
-package com.welness.welness.controllers;
+package com.wellness.wellness.controllers;
 
-import com.welness.welness.model.Client;
-import com.welness.welness.repositories.ClientRepository;
+import com.wellness.wellness.model.Client;
+import com.wellness.wellness.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

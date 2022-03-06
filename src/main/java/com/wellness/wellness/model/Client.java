@@ -1,6 +1,4 @@
-package com.welness.welness.model;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package com.wellness.wellness.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

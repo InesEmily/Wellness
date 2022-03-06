@@ -1,7 +1,6 @@
-package com.welness.welness.repositories;
+package com.wellness.wellness.repositories;
 
-import com.welness.welness.model.Client;
-import org.springframework.data.jpa.repository.Query;
+import com.wellness.wellness.model.Client;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ClientRepository extends CrudRepository<Client,Integer> {

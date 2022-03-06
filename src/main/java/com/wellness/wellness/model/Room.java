@@ -1,4 +1,4 @@
-package com.welness.welness.model;
+package com.wellness.wellness.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

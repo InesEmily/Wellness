@@ -1,4 +1,4 @@
-package com.welness.welness.controllers;
+package com.wellness.wellness.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

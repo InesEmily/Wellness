@@ -1,7 +1,7 @@
-package com.welness.welness.controllers;
+package com.wellness.wellness.controllers;
 
-import com.welness.welness.model.Room;
-import com.welness.welness.repositories.RoomRepository;
+import com.wellness.wellness.model.Room;
+import com.wellness.wellness.repositories.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
