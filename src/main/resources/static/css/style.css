@@ -213,7 +213,7 @@ p {
 }
 
 .contact-form form input[type="submit"] {
-    background: #fa3e19;
+    background: black;
     color: #fff;
     width: 190px;
     margin: 15px auto 0;
@@ -222,12 +222,13 @@ p {
     float: none;
     display: flex;
     cursor: pointer;
+    align-content: center;
 }
 
 .contact-form form input[type="submit"]:hover,
 .contact-form form input[type="submit"]:focus {
-    background: #111;
-    color: #fff;
+    background: gold;
+    color: black;
     transition: ease all 0.5s;
 }
 
@@ -940,8 +941,8 @@ footer .copyright p {
 }
 
 .subcribe form button {
-    background: #fa3e19;
-    color: #fff;
+    background: gold;
+    color: black;
     width: 255px;
     border: none;
     font-size: 20px;
