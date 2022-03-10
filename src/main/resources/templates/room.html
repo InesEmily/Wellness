@@ -12,6 +12,9 @@
           th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/rooms.js"></script>
     <title>Zensational</title>
     <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
 </head>
@@ -21,12 +24,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-            <h2 th:text="${room.get().getName()}"></h2>
-            <p th:text="|Capaciteit voor ${room.get().getCapacity()} personen|"></p>
-            <p th:text="${room.get().getDescription()}"></p>
+                <h2 th:text="${room.get().getName()}"></h2>
+                <p th:text="|Capaciteit voor ${room.get().getCapacity()} personen|"></p>
+                <p th:text="${room.get().getDescription()}"></p>
+
+                <div class="input-group date" data-provide="datepicker">
+                    <input type="text" class="form-control">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
+
+
 </main>
 
 <footer>
