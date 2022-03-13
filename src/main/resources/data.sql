@@ -1,23 +1,25 @@
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (1, 'Frans stormstraat 20, 2812 Muizen', '1992-03-11', 'inesemilymertens@gmail.com','F','Mertens', 'Ines', 0478435049);
+    (1, '1992-03-11', 'Inesemilymertens@gmail.com', 'F', 21, 'Mertens', 'Ines ', 488435049, 2800, 'keistraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (2, 'Brusselsestraat 16,3000 Leuven', '2002-04-11', 'seppeTeugels@gmail.com', 'M','Teugels', 'Seppe', 0478435059);
+    (2, '2002-04-11', 'seppeTeugels@gmail.com', 'M',24,'Teugels', 'Seppe', 0478435059,2800,'Brusselsestraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (3, 'Zoetewei 15 , 2800 Mechelen', '1994-08-11', 'DriesDubois@gmail.com','M', 'Dubois', 'Dries', 0478435059);
+(3, '1994-06-11', 'Dries@gmail.com', 'M', 11, 'Dubois', 'Dries', 477885122, 2800, 'zandstraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (4, 'Leuvensesteenweg 28, 2812 Muizen', '1998-05-11', 'Chloe_claessen@gmail.com', 'F','Claessen', 'Chloë', 0488435049);
+(4, '1992-04-25', 'niels@gmail.com', 'M', 21, 'Oerlemans', 'Niels', 485469137, 2800, 'keistraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (5, 'Diestsestraat 15,3000 Leuven', '2000-09-11', 'Jennifer_ida@gmail.com', 'F','Ida', 'Jennifer', 0478455049);
+(5, '1993-07-11', 'jennifer@gmail.com', 'F', 19, 'Ida', 'Jennifer', 475123456, 3000, 'vogelstraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (6, 'Diestsestraat 15,3000 Leuven', '2000-10-11', 'Wouter_ida@gmail.com', 'M','Ida', 'Wouter', 0478425049);
+(6, '2005-11-09', 'claes@gmail.com', 'F', 57, 'Claes', 'Chloë', 487912658, 3000, 'zaadstraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (7, 'Frans stormstraat 20, 2812 Muizen', '2000-04-25', 'Mertens_niels@gmail.com','M' ,'Mertens', 'Niels', 0478415049);
+(7, '2002-05-27', 'vera@gmail.com', 'F', 84, 'Peeters', 'Vera', 499251384, 3000, 'melkstraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (8, 'cardenberch 12 , 3000 Leuven', '2011-09-23', 'Verheyden_Dries@gmail.com','M','Verheyden', 'Dylan', 0478465049);
+(8, '1998-10-24', 'smith@gmail.com', 'F', 24, 'Smith', 'Mieke', 487662211, 3070, 'glasstraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (9, 'fonteinstraat 28,3000 Leuven', '1998-08-01', 'Gillis_Maartena@gmail.com', 'M','Gillis', 'Maarten', 0478445049);
+(9, '1997-02-15', 'lan@gmail.com', 'M', 84, 'Lan', 'Otto', 485641928, 3000, 'keistraat');
 INSERT INTO "PUBLIC"."CLIENT" VALUES
-    (10, 'vismarkt 15,2800 Mechelen', '1996-11-13', 'Verlinden_Mieke@gmail.com', 'F','Verlinden', 'Mieke', 0478495049);
+(10, '2001-08-24', 'smets@gmail.com', 'F', 58, 'Smets', 'Sarah', 489576134, 2800, 'blikstraat');
+
+
 INSERT INTO "PUBLIC"."ROOM" VALUES
     (1, 20, 'Kom tot rust in het stijlvolle interieur van de Mozaïk sauna. De veelvuldige waterstralen van zwembad en jacuzzi zorgen voor een totale ontspanning.', 'Mozaïk room');
 INSERT INTO "PUBLIC"."ROOM" VALUES

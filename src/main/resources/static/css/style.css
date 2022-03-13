@@ -1243,7 +1243,7 @@ footer .item h4 {
 
 .table-client{
     display: inline-block;
-    width: 50%;
+    width: 100%;
     align-content: center;
 }
 
@@ -1312,6 +1312,7 @@ a.smallButton {
 .viproom h4, .achtergrondSauna h4, .achtergrondTarieven h4{
     color: gold;
 }
+
 
 
 
