@@ -3,60 +3,55 @@
       xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="all"
-          th:href="@{../css/style.css}" href="../css/style.css"/>
-    <!--        <link rel="stylesheet" href="../css/fontawesome.min.css">-->
-    <link rel="stylesheet" type="text/css" media="all"
-          th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" media="all"
-          th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
-
-    <script src="../static/js/bootstrap.min.js"></script>
-    <script src="../static/js/jquery-3.3.1.min.js"></script>
-    <script src="../static/js/rooms.js"></script>
-    <!--        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="all"
+        th:href="@{../css/style.css}" href="../css/style.css"/>
+  <!--        <link rel="stylesheet" href="../css/fontawesome.min.css">-->
+  <link rel="stylesheet" type="text/css" media="all"
+        th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" media="all"
+        th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
+  <!--        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">-->
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
+  <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
 <div id="service" class="hiw_section layout_padding" style="background: #1a2428;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <h3 class="white_font">Onze Privé Kamers</h3>
-                <p class="white_font">Drie volledig gescheiden spa's bezorgen je onvergetelijke momenten in een trendy
-                    hedendaags decor.</p>
-            </div>
-            <div class="col-md-5">
-            </div>
-        </div>
-        <div class="row">
-            <div id="mRoom" class="col-md-4">
-                <a th:href="@{/room/1}">
-                    <img class="margin_top_30 img-responsive" src="imgs/roomMozaik.jpg" alt="#"/>
-                </a>
-                <h3 class="blog_head">Mozaïk Room</h3>
-            </div>
-            <div id="wRoom" class="col-md-4">
-                <a th:href="@{/room/4}">
-                    <img class="margin_top_30 img-responsive" src="imgs/smallRoom.jpg" alt="#"/>
-                </a>
-                <h3 class="blog_head">White Room</h3>
-            </div>
-            <div id="gRoom" class="col-md-4">
-                <a th:href="@{/room/3}">
-                    <img class="margin_top_30 img-responsive" src="imgs/roomExotic.jpg" alt="#"/>
-                </a>
-                <h3 class="blog_head">Greek Room</h3>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h3 class="white_font">Onze Privé Kamers</h3>
+        <p class="white_font">Drie volledig gescheiden spa's bezorgen je onvergetelijke momenten in een trendy hedendaags decor.</p>
+      </div>
+      <div class="col-md-5">
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-4">
+        <a th:href="@{/room/1}">
+          <img class="margin_top_30 img-responsive" src="imgs/roomMozaik.jpg" alt="#"/>
+        </a>
+        <h3 class="blog_head">Mozaïk Room</h3>
+      </div>
+      <div class="col-md-4">
+        <a th:href="@{/room/4}">
+          <img class="margin_top_30 img-responsive" src="imgs/smallRoom.jpg" alt="#"/>
+        </a>
+        <h3 class="blog_head">White Room</h3>
+      </div>
+      <div class="col-md-4">
+        <a th:href="@{/room/3}">
+          <img class="margin_top_30 img-responsive" src="imgs/roomExotic.jpg" alt="#"/>
+        </a>
+        <h3 class="blog_head">Greek Room</h3>
+      </div>
+    </div>
+  </div>
 </div>
 <footer>
-    <div th:replace="fragments/footer :: footer">footer</div>
+  <div th:replace="fragments/footer :: footer">footer</div>
 </footer>
 
 </body>
