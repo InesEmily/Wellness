@@ -39,7 +39,7 @@
                 <p th:text="|Birthday :${client.getBirthday()}|"></p>
                 <p th:text="|Phone number :${client.getPhoneNumber()}|"></p>
                 <p th:text="|E-mail :${client.getEmail()}|"></p>
-                <p th:text="|Adress :${client.getStreet()} ${client.getHousenumber()} ${client.getProvince()}|"></p>
+                <p th:text="|Adress :${client.getStreet()} ${client.getHousenumber()} ${client.getPostcode()}|"></p>
 
             </div>
             <div class="kolom2" th:unless="${client}">

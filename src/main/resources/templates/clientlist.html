@@ -30,10 +30,15 @@
                                placeholder="Search on name" aria-label="Search"
                                aria-describedby="search-addon"/>
                         <span class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></span>
-                        <input type="radio" id="M" name="fav_language">
-                        <label for="M">M</label><br>
-                        <input type="radio" id="F" name="fav_language">
-                        <label for="F">F</label><br>
+
+                        <label for="male" >M</label>
+                        <input type="radio" id="male" name="gender" value="M">
+
+                        <label for="female">F</label>
+                        <input type="radio" id="female" name="gender" value="F">
+<!--                        wa er achter staat = value-->
+
+
                         <label for="keyword" class="filtername"></label>
                         <input type="text" id="postcode" name="postcode" class="form-control rounded"
                                placeholder="Search on postcode" aria-label="Search"
@@ -46,15 +51,15 @@
                     </form>
                 </div>
             </div>
-                <div class="col-md-6">
-                    <div th:each="client: ${allclient}">
-                        <a class="buttonLook mediumButton"
-                           th:href="@{|/client/${client.id}|}"
-                           th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
-                    </div>
+            <div class="col-md-6">
+                <div th:each="client: ${allclient}">
+                    <a class="buttonLook mediumButton"
+                       th:href="@{|/client/${client.id}|}"
+                       th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
                 </div>
             </div>
         </div>
+    </div>
 </main>
 
 <footer>

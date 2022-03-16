@@ -2,6 +2,7 @@ package com.wellness.wellness.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -10,18 +11,18 @@ public class Client {
     private int id;
     private String name;
     private String lastName;
-    private Character gender;
-    private Date birthday;
+    private String gender;
+    private LocalDate birthday;
     private int phoneNumber;
     private String street;
     private int housenumber;
-    private int province;
+    private int postcode;
     private String email;
 
     public Client() {
     }
 
-    public Client(String name, String lastName, Character gender, Date birthday, int phoneNumber, String street, int housenumber, int province, String email) {
+    public Client(String name, String lastName, String gender, LocalDate birthday, int phoneNumber, String street, int housenumber, int province, String email) {
         this.name = name;
         this.lastName = lastName;
         this.gender = gender;
@@ -29,7 +30,7 @@ public class Client {
         this.phoneNumber = phoneNumber;
         this.street = street;
         this.housenumber = housenumber;
-        this.province = province;
+        this.postcode = province;
         this.email = email;
     }
 
@@ -57,19 +58,19 @@ public class Client {
         this.lastName = lastName;
     }
 
-    public Character getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Character gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
@@ -97,12 +98,12 @@ public class Client {
         this.housenumber = housenumber;
     }
 
-    public int getProvince() {
-        return province;
+    public int getPostcode() {
+        return postcode;
     }
 
-    public void setProvince(int province) {
-        this.province = province;
+    public void setPostcode(int province) {
+        this.postcode = province;
     }
 
     public String getEmail() {
