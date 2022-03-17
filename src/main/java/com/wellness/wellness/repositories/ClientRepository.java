@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface ClientRepository extends CrudRepository<Client, Integer> {
 
-    List<Client> findByNameContainsIgnoreCase(String keyword);
+
 
     List<Client> findAllBy();
 
@@ -24,10 +24,8 @@ public interface ClientRepository extends CrudRepository<Client, Integer> {
     @Query("select c from Client c where (:gender is null or upper(c.gender)  like %:gender%) ")
     List<Client> findAllByGender(@Param("gender") String gender);
 
-    @Query("select c from Client c where (upper(c.name)  is null or upper(c.name) like %:name% or upper(c.lastName) like  %:name%) AND (:postcode is null or :postcode = c.postcode) and (:gender is null or upper (c.gender) like %:gender% )")
-    List<Client> findBy(@Param("name")String name,@Param("postcode") Integer postcode,@Param("gender")String gender);
-
-
+//    @Query("select c from Client c where (upper(c.name)  is null or upper(c.name) like %:name% or upper(c.lastName) like  %:name%) AND (:postcode is null or :postcode = c.postcode) and (:gender is null or upper (c.gender) like %:gender% )")
+//    List<Client> findBy(@Param("name") String name, @Param("postcode") Integer postcode, @Param("gender") String gender);
 
 
 //    @Query("SELECT c FROM Client c WHERE " +

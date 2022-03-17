@@ -60,6 +60,15 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div th:each="client: ${allclient}">
+                    <a class="buttonLook mediumButton"
+                       th:href="@{|/client/${client.id}|}"
+                       th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 

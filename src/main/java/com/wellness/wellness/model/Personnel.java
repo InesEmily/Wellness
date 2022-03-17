@@ -5,10 +5,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.time.LocalDate;
 import java.util.Collection;
-import java.util.Date;
 
 @Entity
-public class Client {
+public class Personnel {
     @Id
     private int id;
     private String name;
@@ -20,20 +19,12 @@ public class Client {
     private int housenumber;
     private int postcode;
     private String email;
+    private String occupation;
+    private String education;
+    @ManyToMany
+    Collection<Client> clients;
 
-    public Client() {
-    }
-
-    public Client(String name, String lastName, String gender, LocalDate birthday, int phoneNumber, String street, int housenumber, int province, String email) {
-        this.name = name;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.birthday = birthday;
-        this.phoneNumber = phoneNumber;
-        this.street = street;
-        this.housenumber = housenumber;
-        this.postcode = province;
-        this.email = email;
+    public Personnel() {
     }
 
     public int getId() {
@@ -42,6 +33,22 @@ public class Client {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+
+    public String getEducation() {
+        return education;
+    }
+
+    public void setEducation(String education) {
+        this.education = education;
     }
 
     public String getName() {
@@ -104,8 +111,8 @@ public class Client {
         return postcode;
     }
 
-    public void setPostcode(int province) {
-        this.postcode = province;
+    public void setPostcode(int postcode) {
+        this.postcode = postcode;
     }
 
     public String getEmail() {
@@ -116,14 +123,11 @@ public class Client {
         this.email = email;
     }
 
-    @ManyToMany(mappedBy = "clients")
-    private Collection<Personnel> personnels;
-
-    public Collection<Personnel> getPersonnels() {
-        return personnels;
+    public Collection<Client> getClients() {
+        return clients;
     }
 
-    public void setPersonnels(Collection<Personnel> personnels) {
-        this.personnels = personnels;
+    public void setClients(Collection<Client> clients) {
+        this.clients = clients;
     }
 }

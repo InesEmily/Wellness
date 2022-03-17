@@ -28,3 +28,39 @@ INSERT INTO "PUBLIC"."ROOM" VALUES
     (3, 15, '“Mens sana in corpore sano!”Het interieur van de Greek sauna doet met zijn zuilen en borstbeelden de klassieke Oudheid herleven.', 'Greek room');
 INSERT INTO "PUBLIC"."ROOM" VALUES
     (4, 4, 'Geniet van een glaasje champagne voor de open haard of van de sauna, hammam, jacuzzi en verwarmd zwembad die gezellig binnen zijn gelegen,', 'White room');
+
+INSERT INTO "PUBLIC"."PERSONNEL" VALUES
+                                     (1, DATE '1992-06-25', 'Bachelor Health Sciences', 'senna@gmail.com', 'F', 22, 'Verberg', 'Lara', 'Yoga instructor', 0478365189, 2800, 'keistraat'),
+                                     (2, DATE '1994-08-24', 'Master  physiotherapy ', 'bruno@gmail.com', 'M', 34, 'Nagels', 'Bruno', 'Chiropractic', 0488997755, 3000, 'leistraat'),
+                                     (3, DATE '1995-01-12', 'Bachelor Health Sciences', 'zoe@gmail.com', 'F', 11, 'Martens', 'zoe', 'Yoga instructor', 0481264967, 2800, 'zeestraat'),
+                                     (4,DATE '1995-01-12','High school diploma','dennis@gmail.com','M',5,'Verzand','Dennis','Massage Therapist',0472514326,3000,'zandstraat'),
+                                    (5,DATE '1995-08-12','High school diploma','caroline@gmail.com','F',9,'Venzuela','Caroline','Massage Therapist',0472484326,3000,'sterstraat');
+
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (1,1);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (2,1);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (4,1);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (3,2);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (5,2);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (2,2);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (1,3);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (4,3);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (5,3);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (1,4);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (2,4);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (3,4);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (1,5);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (5,5);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (4,5);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (1,6);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (3,6);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (5,6);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (2,7);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (3,7);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (4,7);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (2,8);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (4,8);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (1,8);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (2,9);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (3,9);
+INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (5,10);
+
