@@ -44,16 +44,25 @@ public class ClientController {
             clients = clientRepository.findAllBy();
 
         }
-        ArrayList<Client> ageClients = new ArrayList<>();
         model.addAttribute("allclient", clients);
-        for (Client client : clientRepository.findAllBy()){
-           int years = Period.between(client.getBirthday(), LocalDate.now()).getYears();
+        if (age!= null){
+            ArrayList<Client> ageClients = new ArrayList<>();
 
-            if (years == age){
-                ageClients.add(client);
-                // hoe zet je deze arraylist dan in de view?
+            for (Client client : clientRepository.findAllBy()){
+                int years = Period.between(client.getBirthday(), LocalDate.now()).getYears();
+
+                if (years == age){
+                    ageClients.add(client);
+                    // hoe zet je deze arraylist dan in de view?
+                    model.addAttribute("allclient",ageClients);
+                }
             }
+        }else {
+            clients = clientRepository.findAll();
+            model.addAttribute("allclient",clients);
+
         }
+
         return "clientlist";
 
     }
