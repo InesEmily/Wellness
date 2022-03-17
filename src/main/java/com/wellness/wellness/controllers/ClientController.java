@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
@@ -42,24 +43,25 @@ public class ClientController {
         }else {
             clients = clientRepository.findAllBy();
 
-//            Iterator<Client> itr = clients.iterator();
-//            while (itr.hasNext()) {
-//                LocalDate date = itr.next().getBirthday();
-//               Integer ageController = Period.between(date, LocalDate.now()).getYears();
-//                if (ageController == age){
-//                    model.addAttribute("age",clients)
-//                }
-//            }
         }
+        ArrayList<Client> ageClients = new ArrayList<>();
         model.addAttribute("allclient", clients);
+        for (Client client : clientRepository.findAllBy()){
+           int years = Period.between(client.getBirthday(), LocalDate.now()).getYears();
+
+            if (years == age){
+                ageClients.add(client);
+                // hoe zet je deze arraylist dan in de view?
+            }
+        }
         return "clientlist";
 
     }
 
 
-//    public int calculateAge(Client client) {
-//        System.out.println(Period.between(client.getBirthday(), LocalDate.now()).getYears());
-//        return Period.between(client.getBirthday(), LocalDate.now()).getYears();
-//    }
+    public int calculateAge(Client client) {
+        System.out.println(Period.between(client.getBirthday(), LocalDate.now()).getYears());
+        return Period.between(client.getBirthday(), LocalDate.now()).getYears();
+    }
 
 }
