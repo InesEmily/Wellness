@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -37,34 +35,39 @@ public class ClientController {
     @GetMapping({"/clientlist"})
     public String clienstlist(Model model, @RequestParam(required = false) String keyword, @RequestParam(required = false) Integer postcode, @RequestParam(required = false) String gender, @RequestParam(required = false) Integer age) {
         Iterable<Client> clients;
+        ArrayList<Client> Clientlist = new ArrayList<>();
+        ArrayList<Client> ClientlistFiltered = new ArrayList<>();
 
-        if (keyword != null) {
-            clients = clientRepository.findByNameContainingIgnoreCase(keyword.toUpperCase());
-//            clients = clientRepository.findAllByPostcodeContaining(postcode);
-//            clients = clientRepository.findByNameContainingIgnoreCase(keyword.toUpperCase());
-        } else {
-            clients = clientRepository.findAllBy();
+        clients = clientRepository.findByfilter(keyword, postcode, gender);
 
+        if (gender != null) {
+            clients = clientRepository.findAllByGender(gender.toUpperCase());
+            for(Client client : Clientlist){
+                if(Clientlist.contains(client))
+                ClientlistFiltered.add(client);
+            }
         }
-        model.addAttribute("allclient", clients);
-//        if (age != null) {
-//            ArrayList<Client> ageClients = new ArrayList<>();
-//
-//            for (Client client : clientRepository.findAllBy()) {
-//                int years = Period.between(client.getBirthday(), LocalDate.now()).getYears();
-//
-//                if (years == age) {
-//                    ageClients.add(client);
-//                    // hoe zet je deze arraylist dan in de view?
-//                    model.addAttribute("allclient", ageClients);
-//                }
-//            }
-//        } else {
-//            clients = clientRepository.findAll();
-//            model.addAttribute("allclient", clients);
-//
-//        }
 
+        if (postcode != null) {
+            for(Client client : Clientlist){
+                if(!Clientlist.contains(client)){
+                    ClientlistFiltered.add(client);
+                }
+            }
+            Clientlist.addAll(clientRepository.findAllByPostcodeContaining(postcode));
+        }
+        if (keyword != null) {
+            Clientlist.addAll(clientRepository.findByNameContainingIgnoreCase(keyword.toUpperCase()));
+        }
+        if (age != null) {
+            for (Client client : clientRepository.findAllBy()) {
+                int years = Period.between(client.getBirthday(), LocalDate.now()).getYears();
+                if (years == age) {
+                    Clientlist.add(client);
+                }
+            }
+        }
+        model.addAttribute("allclient",Clientlist);
         return "clientlist";
 
     }
