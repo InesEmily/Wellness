@@ -33,41 +33,24 @@ public class ClientController {
     }
 
     @GetMapping({"/clientlist"})
-    public String clienstlist(Model model, @RequestParam(required = false) String keyword, @RequestParam(required = false) Integer postcode, @RequestParam(required = false) String gender, @RequestParam(required = false) Integer age) {
-        Iterable<Client> clients;
-        ArrayList<Client> Clientlist = new ArrayList<>();
-        ArrayList<Client> ClientlistFiltered = new ArrayList<>();
+    public String clienstlist(Model model, @RequestParam(required = false) String keyword, @RequestParam(required = false) Integer postcode, @RequestParam(required = false) String gender, @RequestParam(required = false) Integer age1, @RequestParam(required = false) Integer age2) {
+        Iterable<Client> clients = clientRepository.findAllBy();
+        LocalDate ageInDateMin;
+        LocalDate ageInDateMax;
+        if (age1 != null){
+            ageInDateMin = LocalDate.now().minusYears(age1);
+        }
+        else
+            ageInDateMin = null;
+        if(age2 != null){
+            ageInDateMax= LocalDate.now().minusYears(age2);
+        }else
+           ageInDateMax = null;
+        clients = clientRepository.findByfilter(keyword, postcode, gender, ageInDateMin,ageInDateMax);
 
-        clients = clientRepository.findByfilter(keyword, postcode, gender);
 
-        if (gender != null) {
-            clients = clientRepository.findAllByGender(gender.toUpperCase());
-            for(Client client : Clientlist){
-                if(Clientlist.contains(client))
-                ClientlistFiltered.add(client);
-            }
-        }
 
-        if (postcode != null) {
-            for(Client client : Clientlist){
-                if(!Clientlist.contains(client)){
-                    ClientlistFiltered.add(client);
-                }
-            }
-            Clientlist.addAll(clientRepository.findAllByPostcodeContaining(postcode));
-        }
-        if (keyword != null) {
-            Clientlist.addAll(clientRepository.findByNameContainingIgnoreCase(keyword.toUpperCase()));
-        }
-        if (age != null) {
-            for (Client client : clientRepository.findAllBy()) {
-                int years = Period.between(client.getBirthday(), LocalDate.now()).getYears();
-                if (years == age) {
-                    Clientlist.add(client);
-                }
-            }
-        }
-        model.addAttribute("allclient",Clientlist);
+        model.addAttribute("allclient",clients);
         return "clientlist";
 
     }

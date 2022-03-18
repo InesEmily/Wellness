@@ -30,7 +30,6 @@
                                placeholder="Search on name" aria-label="Search"
                                aria-describedby="search-addon"/>
                         <span class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></span>
-                        ///bl
 
                         <label for="male" >M</label>
                         <input type="radio" id="male" name="gender" value="M">
@@ -39,28 +38,23 @@
                         <input type="radio" id="female" name="gender" value="F">
 <!--                        wa er achter staat = value-->
 
-
                         <label for="keyword" class="filtername"></label>
                         <input type="text" id="postcode" name="postcode" class="form-control rounded"
                                placeholder="Search on postcode" aria-label="Search"
                                aria-describedby="postcode-addon"/>
                         <span class="input-group-text border-0" id="postcode-addon"><i class="fas fa-search"></i></span>
 
-                        <input type="text" id="age" name=age class="form-control rounded"
-                               placeholder="Search on age" aria-label="Search"
+                        <input type="text" id="age1" name=age1  class="form-control rounded"
+                               placeholder="minimum age" aria-label="Search"
                                aria-describedby="birthday-addon"/>
-                        <span class="input-group-text border-0" id="birthdat-addon"><i class="fas fa-search"></i></span>
+                        <span class="input-group-text border-0" id="birthdate1-addon"><i class="fas fa-search"></i></span>
+                        <input type="text" id="age2" name=age2 class="form-control rounded"
+                               placeholder="maximum age" aria-label="Search"
+                               aria-describedby="birthday-addon"/>
+                        <span class="input-group-text border-0" id="birthdate2-addon"><i class="fas fa-search"></i></span>
                     </form>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div th:each="client: ${allclient}">
-                    <a class="buttonLook mediumButton"
-                       th:href="@{|/client/${client.id}|}"
-                       th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-6">
                 <div th:each="client: ${allclient}">
