@@ -23,9 +23,9 @@ public interface ClientRepository extends CrudRepository<Client, Integer> {
     @Query("select c from Client c where (:gender is null or upper(c.gender)  like %:gender%) ")
     List<Client> findAllByGender(@Param("gender") String gender);
 
-    @Query("select c from Client c where ((:keyword IS NOT NULL and ( upper(c.name) like %:keyword% or upper(c.lastName) like %:keyword%)) AND"+
-            " (:postcode is not null and :postcode = c.postcode) AND " +
-            "(:gender is not null and upper(c.gender) like %:gender%)) ")
+    @Query("select c from Client c where (:keyword IS NULL or ( upper(c.name) like upper(concat('%',:keyword,'%'))  or upper(c.lastName) like upper(concat('%',:keyword,'%')) AND"+
+            " (:postcode is null or :postcode = c.postcode) AND " +
+            "(:gender is null or upper(c.gender) like  upper(concat('%',:gender,'%'))))) ")
     List<Client> findByfilter(@Param("keyword") String keyword, @Param("postcode") Integer postcode, @Param("gender") String gender);
 
 

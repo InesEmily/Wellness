@@ -30,6 +30,7 @@
                                placeholder="Search on name" aria-label="Search"
                                aria-describedby="search-addon"/>
                         <span class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></span>
+                        ///bl
 
                         <label for="male" >M</label>
                         <input type="radio" id="male" name="gender" value="M">
@@ -52,7 +53,16 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-6" th:if="${allclient}">
+            <div class="col-md-6">
+                <div th:each="client: ${allclient}">
+                    <a class="buttonLook mediumButton"
+                       th:href="@{|/client/${client.id}|}"
+                       th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
                 <div th:each="client: ${allclient}">
                     <a class="buttonLook mediumButton"
                        th:href="@{|/client/${client.id}|}"

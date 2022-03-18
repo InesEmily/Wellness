@@ -1,0 +1,56 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/style.css}" href="../css/style.css"/>
+    <!--        <link rel="stylesheet" href="../css/fontawesome.min.css">-->
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.min.css}" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.bundle.min.js}" href="../css/bootstrap.bundle.min.js"/>
+    <title>Zensational</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+<main>
+    <div class="client">
+        <div class="prevButtonDiv">
+            <a class="buttonLook smallButton" th:if="${personnel.getId}>1" th:href="@{${personnel.getId()-1}}" th:text="'<'"></a>
+            <a class="buttonLook smallButton" th:if="${personnel.getId}==1" th:href="@{${endOfList}}" th:text="'<'"></a>
+        </div>
+        <div class="nextButtonDiv">
+            <a class="buttonLook smallButton" th:if="${personnel.getId}<${endOfList}" th:href="@{${personnel.getId()+1}}"
+               th:text="'>'"></a>
+            <a class="buttonLook smallButton" th:if="${personnel.getId}==${endOfList}" th:href="@{1}" th:text="'>'"></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- hier test je of venue niet gelijk is aan null ( is er een waarde aanwezig) -->
+                <div class="Kolom2" th:if="${personnel}">
+
+
+                    <h2 th:text="|${personnel.getName()} ${personnel.getLastName()}|">personnel</h2>
+                    <p th:text="|Gender :${personnel.getGender()}|">client</p>
+                    <p th:text="|Birthday :${personnel.getBirthday()}|"></p>
+                    <p th:text="|Phone number :${personnel.getPhoneNumber()}|"></p>
+                    <p th:text="|E-mail :${personnel.getEmail()}|"></p>
+                    <p th:text="|Adress :${personnel.getStreet()} ${personnel.getHousenumber()} ${personnel.getPostcode()}|"></p>
+
+                </div>
+                <div class="kolom2" th:unless="${personnel}">
+                    <h2>No client has been chosen</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div th:replace="fragments/footer :: footer">footer</div>
+</footer>
+</body>
+</html>
