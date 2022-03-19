@@ -17,15 +17,41 @@
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
+<div class="client">
+    <div class="prevButtonDiv">
+        <a class="buttonLook smallButton" th:if="${room.get().getId()}>1" th:href="@{${room.get().getId()-1}}"
+           th:text="'<'"></a>
+        <a class="buttonLook smallButton" th:if="${room.get().getId()}==1" th:href="@{${endOfList}}" th:text="'<'"></a>
+    </div>
+    <div class="nextButtonDiv">
+        <a class="buttonLook smallButton" th:if="${room.get().getId()}<${endOfList}"
+           th:href="@{${room.get().getId()+1}}"
+           th:text="'>'"></a>
+        <a class="buttonLook smallButton" th:if="${room.get().getId()}==${endOfList}" th:href="@{1}" th:text="'>'"></a>
+    </div>
+</div>
 <main>
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-            <h2 th:text="${room.get().getName()}"></h2>
-            <p th:text="|Capaciteit voor ${room.get().getCapacity()} personen|"></p>
-            <p th:text="${room.get().getDescription()}"></p>
+                <h2 th:text="${room.get().getName()}"></h2>
+                <p th:text="|Capaciteit voor ${room.get().getCapacity()} personen|"></p>
+                <p th:text="${room.get().getDescription()}"></p>
+            </div>
+            <div class="col-md-5">
+                <div class="classForMargin">
+                    <div th:if="${room.get().getId() ==1}">
+                        <img th:src="@{../imgs/roomMozaik.jpg}"/>
+                    </div>
+                    <div th:if="${room.get().getId() ==2}">
+                        <img th:src="@{../imgs/roomExotic.jpg}"/>
+                    </div>
+                    <div th:if="${room.get().getId() ==3}">
+                        <img th:src="@{../imgs/smallRoom.jpg}"/>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </main>
 

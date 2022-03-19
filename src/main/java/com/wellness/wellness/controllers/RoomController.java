@@ -1,6 +1,7 @@
 package com.wellness.wellness.controllers;
 
 import com.wellness.wellness.model.Booking;
+import com.wellness.wellness.model.Booking;
 import com.wellness.wellness.model.Room;
 import com.wellness.wellness.repositories.BookingRepository;
 import com.wellness.wellness.repositories.RoomRepository;
@@ -28,6 +29,8 @@ public class RoomController {
         if (roomFromDB.isPresent()) {
             model.addAttribute("room", roomFromDB);
             Iterable<Booking> allBookings =bookingRepository.findByRoom(roomFromDB);
+            long endOflist = roomRepository.count();
+            model.addAttribute("endOfList", endOflist);
         }
         return "room";
     }

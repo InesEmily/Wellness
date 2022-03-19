@@ -1312,6 +1312,9 @@ a.smallButton {
 .viproom h4, .achtergrondSauna h4, .achtergrondTarieven h4{
     color: gold;
 }
+.classForMargin{
+    margin-bottom: 10px;
+}
 
 
 

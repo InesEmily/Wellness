@@ -23,11 +23,9 @@ INSERT INTO "PUBLIC"."CLIENT" VALUES
 INSERT INTO "PUBLIC"."ROOM" VALUES
     (1, 20, 'Kom tot rust in het stijlvolle interieur van de Mozaïk sauna. De veelvuldige waterstralen van zwembad en jacuzzi zorgen voor een totale ontspanning.', 'Mozaïk room');
 INSERT INTO "PUBLIC"."ROOM" VALUES
-    (2, 20, 'Geniet van het saunagebeuren in de moderne Color sauna waar kleur centraal staat. Je wordt er als het ware ondergedompeld in een regenboog van kleuren.', 'Color room');
+    (2, 15, '“Mens sana in corpore sano!”Het interieur van de Greek sauna doet met zijn zuilen en borstbeelden de klassieke Oudheid herleven.', 'Greek room');
 INSERT INTO "PUBLIC"."ROOM" VALUES
-    (3, 15, '“Mens sana in corpore sano!”Het interieur van de Greek sauna doet met zijn zuilen en borstbeelden de klassieke Oudheid herleven.', 'Greek room');
-INSERT INTO "PUBLIC"."ROOM" VALUES
-    (4, 4, 'Geniet van een glaasje champagne voor de open haard of van de sauna, hammam, jacuzzi en verwarmd zwembad die gezellig binnen zijn gelegen,', 'White room');
+    (3, 4, 'Geniet van een glaasje champagne voor de open haard of van de sauna, hammam, jacuzzi en verwarmd zwembad die gezellig binnen zijn gelegen,', 'White room');
 
 INSERT INTO "PUBLIC"."PERSONNEL" VALUES
                                      (1, DATE '1992-06-25', 'Bachelor Health Sciences', 'senna@gmail.com', 'F', 22, 'Verberg', 'Lara', 'Yoga instructor', 0478365189, 2800, 'keistraat'),
@@ -67,10 +65,10 @@ INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (5,10);
 INSERT INTO "PUBLIC"."BOOKING" VALUES
                                    (1, DATE '2022-03-19', TIME '22:00:00', 1, 1),
                                    (2, DATE '2022-03-18', TIME '20:00:00', 2, 3),
-                                   (3, DATE '2022-03-20', TIME '18:00:00', 3, 4),
+                                   (3, DATE '2022-03-20', TIME '18:00:00', 3, 2),
                                    (4, DATE '2022-03-19', TIME '20:00:00', 4, 1),
                                    (5, DATE '2022-03-18', TIME '22:00:00', 5, 3),
-                                   (6, DATE '2022-03-20', TIME '20:00:00', 6, 4),
+                                   (6, DATE '2022-03-20', TIME '20:00:00', 6, 2),
                                    (7, DATE '2022-03-21', TIME '18:00:00', 7, 1),
                                    (8, DATE '2022-03-21', TIME '20:00:00', 8, 1),
                                    (9, DATE '2022-03-21', TIME '22:00:00', 9, 1),
@@ -78,15 +76,16 @@ INSERT INTO "PUBLIC"."BOOKING" VALUES
                                    (11, DATE '2022-03-22', TIME '20:00:00', 1, 3),
                                    (12, DATE '2022-03-22', TIME '22:00:00', 2, 3),
                                    (13, DATE '2022-03-23', TIME '18:00:00', 3, 3),
-                                   (14, DATE '2022-03-23', TIME '20:00:00', 4, 4),
-                                   (15, DATE '2022-03-24', TIME '18:00:00', 5, 4),
-                                   (16, DATE '2022-03-24', TIME '20:00:00', 6, 4),
+                                   (14, DATE '2022-03-23', TIME '20:00:00', 4, 2),
+                                   (15, DATE '2022-03-24', TIME '18:00:00', 5, 2),
+                                   (16, DATE '2022-03-24', TIME '20:00:00', 6, 2),
                                    (17, DATE '2022-03-24', TIME '22:00:00', 7, 1),
                                    (18, DATE '2022-03-25', TIME '18:00:00', 8, 1),
-                                   (19, DATE '2022-03-25', TIME '22:00:00', 9, 3),
-                                   (20, DATE '2022-03-25', TIME '20:00:00', 10, 4),
+                                   (19, DATE '2022-03-25', TIME '22:00:00', 9, 2),
+                                   (20, DATE '2022-03-25', TIME '20:00:00', 10, 2),
                                    (21, DATE '2022-03-26', TIME '18:00:00', 3, 1),
                                    (22, DATE '2022-03-26', TIME '22:00:00', 7, 3),
-                                   (23, DATE '2022-03-27', TIME '22:00:00', 5, 4),
-                                   (24, DATE '2022-03-27', TIME '18:00:00', 1, 4);
+                                   (23, DATE '2022-03-27', TIME '22:00:00', 5, 2),
+                                   (24, DATE '2022-03-27', TIME '18:00:00', 1, 2);
+
 

@@ -22,6 +22,8 @@ public class BookingController {
         Optional<Booking> bookingFromDB = bookingRepository.findById(id);
         if (bookingFromDB.isPresent()) {
             model.addAttribute("booking", bookingFromDB);
+            long endOflist = bookingRepository.count();
+            model.addAttribute("endOfList", endOflist);
         }
         return "booking";
     }
