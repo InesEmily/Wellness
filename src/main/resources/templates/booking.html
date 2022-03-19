@@ -1,0 +1,52 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/style.css}"/>
+    <!--        <link rel="stylesheet" href="../css/fontawesome.min.css">-->
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/bootstrap.bundle.min.js}"/>
+    <title>Zensational</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5" th:if="${booking}">
+                <h1>Booking</h1>
+                <h5 th:text="|Room :${booking.get().getRoom().getName()}|"></h5>
+                <p th:text="|Client :${booking.get().getClient().getName()} ${booking.get().getClient().getLastName()}|"></p>
+                <p th:text="|Date :${booking.get().getDate()}|"></p>
+                <p th:text="|Time :${booking.get().getTime()}|"></p>
+            </div>
+            <div class="col-md-5">
+                <div th:if="${booking.get().getRoom().getId() ==1}">
+                    <img th:src="@{../imgs/roomMozaik.jpg}"/>
+                    </div>
+                <div th:if="${booking.get().getRoom().getId() ==3}">
+                    <img th:src="@{../imgs/roomExotic.jpg}"/>
+                </div>
+
+                    <div class="col-md-5" th:unless="${booking}">
+                        <h2>No booking has been chosen</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div th:replace="fragments/footer :: footer">footer</div>
+</footer>
+
+</body>
+</html>

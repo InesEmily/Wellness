@@ -1,6 +1,7 @@
 package com.wellness.wellness.controllers;
 
 import com.wellness.wellness.model.Client;
+import com.wellness.wellness.repositories.BookingRepository;
 import com.wellness.wellness.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,8 @@ import java.util.Optional;
 public class ClientController {
     @Autowired
     private ClientRepository clientRepository;
+    @Autowired
+    private BookingRepository bookingRepository;
 
     @GetMapping({"/client", "/client/{id}"})
     public String client(Model model, @PathVariable(required = false) Integer id) {

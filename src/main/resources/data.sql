@@ -64,3 +64,29 @@ INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (2,9);
 INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (3,9);
 INSERT INTO PERSONNEL_CLIENTS(PERSONNELS_ID, CLIENTS_ID) values (5,10);
 
+INSERT INTO "PUBLIC"."BOOKING" VALUES
+                                   (1, DATE '2022-03-19', TIME '22:00:00', 1, 1),
+                                   (2, DATE '2022-03-18', TIME '20:00:00', 2, 3),
+                                   (3, DATE '2022-03-20', TIME '18:00:00', 3, 4),
+                                   (4, DATE '2022-03-19', TIME '20:00:00', 4, 1),
+                                   (5, DATE '2022-03-18', TIME '22:00:00', 5, 3),
+                                   (6, DATE '2022-03-20', TIME '20:00:00', 6, 4),
+                                   (7, DATE '2022-03-21', TIME '18:00:00', 7, 1),
+                                   (8, DATE '2022-03-21', TIME '20:00:00', 8, 1),
+                                   (9, DATE '2022-03-21', TIME '22:00:00', 9, 1),
+                                   (10, DATE '2022-03-22', TIME '18:00:00', 10, 3),
+                                   (11, DATE '2022-03-22', TIME '20:00:00', 1, 3),
+                                   (12, DATE '2022-03-22', TIME '22:00:00', 2, 3),
+                                   (13, DATE '2022-03-23', TIME '18:00:00', 3, 3),
+                                   (14, DATE '2022-03-23', TIME '20:00:00', 4, 4),
+                                   (15, DATE '2022-03-24', TIME '18:00:00', 5, 4),
+                                   (16, DATE '2022-03-24', TIME '20:00:00', 6, 4),
+                                   (17, DATE '2022-03-24', TIME '22:00:00', 7, 1),
+                                   (18, DATE '2022-03-25', TIME '18:00:00', 8, 1),
+                                   (19, DATE '2022-03-25', TIME '22:00:00', 9, 3),
+                                   (20, DATE '2022-03-25', TIME '20:00:00', 10, 4),
+                                   (21, DATE '2022-03-26', TIME '18:00:00', 3, 1),
+                                   (22, DATE '2022-03-26', TIME '22:00:00', 7, 3),
+                                   (23, DATE '2022-03-27', TIME '22:00:00', 5, 4),
+                                   (24, DATE '2022-03-27', TIME '18:00:00', 1, 4);
+

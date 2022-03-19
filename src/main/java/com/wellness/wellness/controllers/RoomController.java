@@ -1,6 +1,8 @@
 package com.wellness.wellness.controllers;
 
+import com.wellness.wellness.model.Booking;
 import com.wellness.wellness.model.Room;
+import com.wellness.wellness.repositories.BookingRepository;
 import com.wellness.wellness.repositories.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +16,8 @@ import java.util.Optional;
 public class RoomController {
     @Autowired
     private RoomRepository roomRepository;
+    @Autowired
+    private BookingRepository bookingRepository;
 
     @GetMapping({"/room", "room/{id}"})
     public String room(Model model, @PathVariable(required = false) Integer id) {
@@ -23,6 +27,7 @@ public class RoomController {
         Optional<Room> roomFromDB = roomRepository.findById(id);
         if (roomFromDB.isPresent()) {
             model.addAttribute("room", roomFromDB);
+            Iterable<Booking> allBookings =bookingRepository.findByRoom(roomFromDB);
         }
         return "room";
     }
