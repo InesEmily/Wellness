@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Optional;
 
@@ -28,8 +29,9 @@ public class BookingController {
         return "booking";
     }
     @GetMapping({"/bookinglist"})
-    public String roomlist(Model model) {
-        final Iterable<Booking> allBooking = bookingRepository.findAll();
+    public String roomlist(Model model, @RequestParam(required = false) String keyword,@RequestParam (required = false) String roomName) {
+       Iterable<Booking> allBooking = bookingRepository.findAllBy();
+       allBooking = bookingRepository.findByfilter(keyword,roomName);
         model.addAttribute("allbookings",allBooking);
         return "bookinglist";
     }
