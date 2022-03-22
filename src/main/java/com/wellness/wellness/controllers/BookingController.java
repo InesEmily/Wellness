@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Date;
 import java.util.Optional;
 
 @Controller
@@ -29,9 +30,9 @@ public class BookingController {
         return "booking";
     }
     @GetMapping({"/bookinglist"})
-    public String roomlist(Model model, @RequestParam(required = false) String keyword,@RequestParam (required = false) String roomName) {
+    public String roomlist(Model model, @RequestParam(required = false) String keyword,@RequestParam (required = false) String roomName, @RequestParam(required = false) Date date) {
        Iterable<Booking> allBooking = bookingRepository.findAllBy();
-       allBooking = bookingRepository.findByfilter(keyword,roomName);
+       allBooking = bookingRepository.findByfilter(keyword,roomName,date);
         model.addAttribute("allbookings",allBooking);
         return "bookinglist";
     }

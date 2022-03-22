@@ -5,7 +5,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.time.LocalDate;
 import java.util.Collection;
-import java.util.Date;
 
 @Entity
 public class Client {
@@ -18,7 +17,7 @@ public class Client {
     private int phoneNumber;
     private String street;
     private int housenumber;
-    private int postcode;
+    private int postalcode;
     private String email;
 
     public Client() {
@@ -32,7 +31,7 @@ public class Client {
         this.phoneNumber = phoneNumber;
         this.street = street;
         this.housenumber = housenumber;
-        this.postcode = province;
+        this.postalcode = province;
         this.email = email;
     }
 
@@ -100,12 +99,12 @@ public class Client {
         this.housenumber = housenumber;
     }
 
-    public int getPostcode() {
-        return postcode;
+    public int getPostalcode() {
+        return postalcode;
     }
 
-    public void setPostcode(int province) {
-        this.postcode = province;
+    public void setPostalcode(int province) {
+        this.postalcode = province;
     }
 
     public String getEmail() {

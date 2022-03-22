@@ -17,7 +17,7 @@ public interface ClientRepository extends CrudRepository<Client, Integer> {
     @Query("SELECT c FROM Client c where upper(c.name)  like %:name% or upper(c.lastName)  like %:name%")
     List<Client> findByNameContainingIgnoreCase(@Param("name") String name);
 
-    @Query("SELECT c from Client c where c.postcode=:postalCode")
+    @Query("SELECT c from Client c where c.postalcode=:postalCode")
     List<Client> findAllByPostcodeContaining(@Param("postalCode") Integer postalCode);
 
 
@@ -25,7 +25,7 @@ public interface ClientRepository extends CrudRepository<Client, Integer> {
     List<Client> findAllByGender(@Param("gender") String gender);
 
     @Query("select c from Client c where ((:keyword IS NULL or upper(c.name) like upper(concat('%',:keyword,'%'))  or upper(c.lastName) like upper(concat('%',:keyword,'%'))) AND"+
-            " (:postcode is null or :postcode = c.postcode) AND " +
+            " (:postcode is null or :postcode = c.postalcode) AND " +
             "(:gender is null or upper(c.gender) like upper(concat('%',:gender,'%'))) AND" +
             "((:agemin is null or :agemin >= c.birthday)AND :agemax is null or :agemax <= c.birthday))")
     List<Client> findByfilter(@Param("keyword") String keyword, @Param("postcode") Integer postcode, @Param("gender") String gender, @Param("agemin") LocalDate agemin, @Param("agemax") LocalDate agemax );
