@@ -13,58 +13,64 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon"  th:href="@{/imgs/lotus.png}">
+    <link rel="icon" type="image/x-icon" th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
 <main>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="table-client">
-                    <h2>Clients</h2>
-                    <form>
-                        <input type="submit" value="search" class="buttonLook filterButton"></input>
-                        <label for="keyword" class="filtername"></label>
-                        <input type="text" id="keyword" name="keyword" class="form-control rounded"
-                               placeholder="Search on name" aria-label="Search"
-                               aria-describedby="search-addon"/>
-                        <span class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></span>
+    <div class="achtergrondClientNew">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="table-client">
+                        <h2>Clients</h2>
+                        <form>
+                            <div class="classForMargin">
+                            <input type="submit" value="search" class="buttonLook filterButton"></input>
+                            </div>
+                            <label for="keyword" class="filtername"></label>
+                            <input type="text" id="keyword" name="keyword" class="form-control rounded"
+                                   placeholder="Search on name" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="search-addon"><i
+                                    class="fas fa-search"></i></span>
 
-                        <label for="male" >M</label>
-                        <input type="radio" id="male" name="gender" value="M">
+                            <label for="male">M</label>
+                            <input type="radio" id="male" name="gender" value="M">
 
-                        <label for="female">F</label>
-                        <input type="radio" id="female" name="gender" value="F">
-<!--                        wa er achter staat = value-->
+                            <label for="female">F</label>
+                            <input type="radio" id="female" name="gender" value="F">
+                            <!--                        wa er achter staat = value-->
 
-                        <label for="keyword" class="filtername"></label>
-                        <input type="text" id="postcode" name="postcode" class="form-control rounded"
-                               placeholder="Search on postcode" aria-label="Search"
-                               aria-describedby="postcode-addon"/>
-                        <span class="input-group-text border-0" id="postcode-addon"><i class="fas fa-search"></i></span>
+                            <label for="keyword" class="filtername"></label>
+                            <input type="text" id="postcode" name="postcode" class="form-control rounded"
+                                   placeholder="Search on postcode" aria-label="Search"
+                                   aria-describedby="postcode-addon"/>
+                            <span class="input-group-text border-0" id="postcode-addon"><i
+                                    class="fas fa-search"></i></span>
 
-                        <input type="text" id="age1" name=age1  class="form-control rounded"
-                               placeholder="minimum age" aria-label="Search"
-                               aria-describedby="birthday-addon"/>
-                        <span class="input-group-text border-0" id="birthdate1-addon"><i class="fas fa-search"></i></span>
-                        <input type="text" id="age2" name=age2 class="form-control rounded"
-                               placeholder="maximum age" aria-label="Search"
-                               aria-describedby="birthday-addon"/>
-                        <span class="input-group-text border-0" id="birthdate2-addon"><i class="fas fa-search"></i></span>
-                    </form>
+                            <input type="text" id="age1" name=age1 class="form-control rounded"
+                                   placeholder="minimum age" aria-label="Search"
+                                   aria-describedby="birthday-addon"/>
+                            <span class="input-group-text border-0" id="birthdate1-addon"><i class="fas fa-search"></i></span>
+                            <input type="text" id="age2" name=age2 class="form-control rounded"
+                                   placeholder="maximum age" aria-label="Search"
+                                   aria-describedby="birthday-addon"/>
+                            <span class="input-group-text border-0" id="birthdate2-addon"><i class="fas fa-search"></i></span>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div th:each="client: ${allclient}">
-                    <a class="buttonLook mediumButton"
-                       th:href="@{|/client/${client.id}|}"
-                       th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div th:each="client: ${allclient}">
+                            <a class="buttonLook mediumButton"
+                               th:href="@{|/client/${client.id}|}"
+                               th:text="|${client.getName()} ${client.getLastName()}|">client name</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </main>
 

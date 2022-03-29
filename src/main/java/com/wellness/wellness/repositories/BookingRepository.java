@@ -21,8 +21,8 @@ public interface BookingRepository extends CrudRepository<Booking,Integer> {
     List<Booking>findAllBy();
 
     @Query("select b from Booking b where (:keyword IS NULL or upper(b.client.name) like upper(concat('%',:keyword,'%'))  or upper(b.client.lastName) like upper(concat('%',:keyword,'%'))) AND"+
-            " (:roomName is Null or upper(b.room.name) like upper(concat('%',:roomName,'%') )) and (:date is null or b.date =:date)")
-    List<Booking> findByfilter(@Param("keyword") String keyword, @Param("roomName") String roomName, @Param("date")LocalDate date);
+            " (:roomName is Null or upper(b.room.name) like upper(concat('%',:roomName,'%') ))")
+    List<Booking> findByfilter(@Param("keyword") String keyword, @Param("roomName") String roomName);
 
 
 

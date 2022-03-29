@@ -19,6 +19,7 @@
 <header>
     <div th:replace="fragments/header :: header">Header</div>
 </header>
+<div class="achtergrondClientNew">
 <main>
     <form th:action="@{|/admin/clientedit/${client.id}|}" th:object="${client}" method="post">
         <div class="container">
@@ -87,6 +88,7 @@
 <footer>
     <div th:replace="fragments/footer :: footer">footer</div>
 </footer>
+</div>
 </body>
 
 </html>

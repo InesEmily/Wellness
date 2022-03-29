@@ -32,7 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/admin/**").hasAuthority("admin")
+                .antMatchers("/admin/**").authenticated()
                 .anyRequest().permitAll()
                 .and().formLogin();
         http.csrf().ignoringAntMatchers("/h2-console/**")

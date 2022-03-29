@@ -33,11 +33,9 @@ public class BookingController {
         return "booking";
     }
     @GetMapping({"/bookinglist"})
-    public String roomlist(Model model, @RequestParam(required = false) String keyword,@RequestParam (required = false) String roomName, @RequestParam(required = false) String date) {
+    public String roomlist(Model model, @RequestParam(required = false) String keyword,@RequestParam (required = false) String roomName) {
        Iterable<Booking> allBooking = bookingRepository.findAllBy();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate dateTime = LocalDate.parse(date, formatter);
-       allBooking = bookingRepository.findByfilter(keyword,roomName,dateTime);
+       allBooking = bookingRepository.findByfilter(keyword,roomName);
 
         model.addAttribute("allbookings",allBooking);
         return "bookinglist";

@@ -13,45 +13,48 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon"  th:href="@{/imgs/lotus.png}">
+    <link rel="icon" type="image/x-icon" th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
-<div class="client">
-    <div class="prevButtonDiv">
-        <a class="buttonLook smallButton" th:if="${booking.get().getId()}>1" th:href="@{${booking.get().getId()-1}}"
-           th:text="'<'"></a>
-        <a class="buttonLook smallButton" th:if="${booking.get().getId()}==1" th:href="@{${endOfList}}" th:text="'<'"></a>
+    <div class="client">
+        <div class="prevButtonDiv">
+            <a class="buttonLook smallButton" th:if="${booking.get().getId()}>1" th:href="@{${booking.get().getId()-1}}"
+               th:text="'<'"></a>
+            <a class="buttonLook smallButton" th:if="${booking.get().getId()}==1" th:href="@{${endOfList}}"
+               th:text="'<'"></a>
+        </div>
+        <div class="nextButtonDiv">
+            <a class="buttonLook smallButton" th:if="${booking.get().getId()}<${endOfList}"
+               th:href="@{${booking.get().getId()+1}}"
+               th:text="'>'"></a>
+            <a class="buttonLook smallButton" th:if="${booking.get().getId()}==${endOfList}" th:href="@{1}"
+               th:text="'>'"></a>
+        </div>
     </div>
-    <div class="nextButtonDiv">
-        <a class="buttonLook smallButton" th:if="${booking.get().getId()}<${endOfList}" th:href="@{${booking.get().getId()+1}}"
-           th:text="'>'"></a>
-        <a class="buttonLook smallButton" th:if="${booking.get().getId()}==${endOfList}" th:href="@{1}" th:text="'>'"></a>
-    </div>
-</div>
-<main>
-    <div class="container">
-        <div class="row">
+    <main>
+        <div class="container">
+            <div class="row">
 
-            <div class="col-md-5" th:if="${booking}">
-                <h1>Booking</h1>
-                <h5 th:text="|Room :${booking.get().getRoom().getName()}|"></h5>
-                <p th:text="|Client :${booking.get().getClient().getName()} ${booking.get().getClient().getLastName()}|"></p>
-                <p th:text="|Date :${booking.get().getDate()}|"></p>
-                <p th:text="|Time :${booking.get().getTime()}|"></p>
-            </div>
-            <div class="col-md-5">
-                <div class="classForMargin">
-                <div th:if="${booking.get().getRoom().getId() ==1}">
-                    <img th:src="@{/imgs/roomMozaik.jpg}"/>
-                    </div>
-                <div th:if="${booking.get().getRoom().getId() ==2}">
-                    <img th:src="@{/imgs/roomExotic.jpg}"/>
+                <div class="col-md-5" th:if="${booking}">
+                    <h1>Booking</h1>
+                    <h5 th:text="|Room :${booking.get().getRoom().getName()}|"></h5>
+                    <p th:text="|Client :${booking.get().getClient().getName()} ${booking.get().getClient().getLastName()}|"></p>
+                    <p th:text="|Date :${booking.get().getDate()}|"></p>
+                    <p th:text="|Time :${booking.get().getTime()}|"></p>
                 </div>
-                    <div th:if="${booking.get().getRoom().getId() ==3}">
-                        <img th:src="@{/imgs/smallRoom.jpg}"/>
+                <div class="col-md-5">
+                    <div class="classForMargin">
+                        <div th:if="${booking.get().getRoom().getId() ==1}">
+                            <img th:src="@{/imgs/roomMozaik.jpg}"/>
+                        </div>
+                        <div th:if="${booking.get().getRoom().getId() ==2}">
+                            <img th:src="@{/imgs/roomExotic.jpg}"/>
+                        </div>
+                        <div th:if="${booking.get().getRoom().getId() ==3}">
+                            <img th:src="@{/imgs/smallRoom.jpg}"/>
+                        </div>
                     </div>
-                </div>
 
                     <div class="col-md-5" th:unless="${booking}">
                         <h2>No booking has been chosen</h2>
@@ -59,10 +62,7 @@
                 </div>
             </div>
         </div>
-
-</main>
-
-
+    </main>
 <footer>
     <div th:replace="fragments/footer :: footer">footer</div>
 </footer>
