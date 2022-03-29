@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
+    <link rel="icon" type="image/x-icon"  th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-6 offset-md-1">
                 <div class="full text_align_center">
-                    <img class="img-responsive" src="../imgs/relax.jpg" alt="#"/>
+                    <img class="img-responsive"  th:src="@{/imgs/relax.jpg}" alt="#"/>
                 </div>
             </div>
         </div>

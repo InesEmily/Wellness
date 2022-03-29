@@ -1275,6 +1275,7 @@ a.smallButton {
     display: block;
     font-size: 1em;
     padding: 0.5em;
+    margin-top: 25px;
 }
 .achtergrondTarieven{
     background-image: url("../imgs/white_room.jpg");

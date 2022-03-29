@@ -1,5 +1,6 @@
 package com.wellness.wellness.controllers;
 
+import com.wellness.wellness.model.Booking;
 import com.wellness.wellness.model.Client;
 import com.wellness.wellness.repositories.BookingRepository;
 import com.wellness.wellness.repositories.ClientRepository;
@@ -22,33 +23,48 @@ public class AdminController {
     private BookingRepository bookingRepository;
 
     @GetMapping({"/clientedit/{id}"})
-    public String clientEdit(Model model, @PathVariable Integer id) {
+    public String clientEdit(Model model, @PathVariable (required = false) Integer id) {
         logger.info("partyEdit" + id);
-
-        Optional<Client> client = clientRepository.findById(id);
-            model.addAttribute("client", client);
-            return "/admin/clientedit";
-        }
-
+        final Iterable<Booking> bookings = bookingRepository.findAll();
+        model.addAttribute("booking", bookings);
+        return "/admin/clientedit";
     }
-//    @PostMapping("/Clientdit/{id}")
-//    public String partyEditPost(Model model, @PathVariable Integer id, @ModelAttribute("party") Client client) {
-//        logger.info("clientEditPost" + id);
-//        clientRepository.save(client);
-//        model.addAttribute("client", client);
-//        return "redirect:/client/" + id;
-//    }
-//    @ModelAttribute("party")
-//    public Client findClient(@PathVariable(required = false) Integer id) {
-//        logger.info("findParty" + id);
-//        if (id == null) {
-//            return new Client();
-//        }
-//        Optional<Client> optionalClient = clientRepository.findById(id);
-//        if (optionalClient.isPresent())
-//            return optionalClient.get();
-//        return null;
-//    }
+
+    @PostMapping("/clientedit/{id}")
+    public String partyEditPost(Model model, @PathVariable Integer id, @ModelAttribute("client") Client client) {
+        logger.info("clientEditPost" + id);
+        clientRepository.save(client);
+        model.addAttribute("client", client);
+
+        return "redirect:/client/" + id;
+    }
 
 
+    @ModelAttribute("client")
+    public Client findClient(@PathVariable(required = false) Integer id) {
+        logger.info("findClient" + id);
+        if (id == null) {
+            return new Client();
+        }
+        Optional<Client> optionalClient = clientRepository.findById(id);
+        if (optionalClient.isPresent())
+            return optionalClient.get();
+        return null;
+    }
+
+    @GetMapping({"/clientnew"})
+    public String clientnew(Model model) {
+        final Iterable<Booking> bookings = bookingRepository.findAll();
+        model.addAttribute("bookings", bookings);
+        return "admin/clientnew";
+    }
+    @PostMapping("/clientnew")
+    public String clientNewPost(Model model,@ModelAttribute("client")Client client){
+        clientRepository.save(client);
+        int id = clientRepository.save(client).getId();
+        return "redirect:/client"+id;
+    }
+
+
+}
 

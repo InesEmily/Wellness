@@ -1,15 +1,18 @@
 package com.wellness.wellness.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Collection;
 
 @Entity
 public class Client {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "client_generator")
+    @SequenceGenerator(name = "client_generator",sequenceName = "client_seq",allocationSize = 1)
     @Id
-    private int id;
+    private Integer id;
     private String name;
     private String lastName;
     private String gender;
@@ -35,11 +38,11 @@ public class Client {
         this.email = email;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

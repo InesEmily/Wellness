@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
+    <link rel="icon" type="image/x-icon"  th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
@@ -26,7 +26,7 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="../imgs/white_room.jpg" class="d-block w-100" alt="...">
+            <img th:src="@{/imgs/white_room.jpg}" class="d-block w-100" alt="...">
             <div class="ovarlay_slide_cont">
                 <h2>Publieke Wellness</h2>
                 <h4>Anavrin room</h4>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../imgs/Wellness.jpg" class="d-block w-100" alt="...">
+            <img th:src="@{/imgs/Wellness.jpg}" class="d-block w-100" alt="...">
             <div class="ovarlay_slide_cont">
                 <h2>Publieke Sauna</h2>
                 <h4>Hotpot Room</h4>
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../imgs/gold_room.jpg" class="d-block w-100" alt="...">
+            <img th:src="@{/imgs/gold_room.jpg}" class="d-block w-100" alt="...">
             <div class="ovarlay_slide_cont">
                 <h2>VIP Room</h2>
                 <h4>Golden Room</h4>
@@ -78,7 +78,7 @@
             </div>
             <div class="col-md-6 offset-md-1">
                 <div class="full text_align_center">
-                    <img class="img-responsive" src="../imgs/relax.jpg" alt="#"/>
+                    <img class="img-responsive" th:src="@{/imgs/relax.jpg}" alt="#"/>
                 </div>
             </div>
         </div>
@@ -89,8 +89,7 @@
         <div class="row">
             <div class="col-md-7">
                 <h3 class="white_font">Onze Privé Kamers</h3>
-                <p class="white_font">adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                <p class="white_font">Neem een momentje voor jullie beiden in onze privé kamers</p>
             </div>
             <div class="col-md-5">
             </div>
@@ -98,19 +97,19 @@
         <div class="row">
             <div class="col-md-4">
                 <a th:href="@{/room/1}">
-                <img class="margin_top_30 img-responsive" src="imgs/roomMozaik.jpg" alt="#"/>
+                <img class="margin_top_30 img-responsive" th:src="@{/imgs/roomMozaik.jpg}" alt="#"/>
                 </a>
                     <h3 class="blog_head">Mozaïk Room</h3>
             </div>
             <div class="col-md-4">
                 <a th:href="@{/room/4}">
-                <img class="margin_top_30 img-responsive" src="imgs/smallRoom.jpg" alt="#"/>
+                <img class="margin_top_30 img-responsive" th:src="@{/imgs/smallRoom.jpg}" alt="#"/>
                 </a>
                 <h3 class="blog_head">White Room</h3>
             </div>
             <div class="col-md-4">
                 <a th:href="@{/room/3}">
-                <img class="margin_top_30 img-responsive" src="imgs/roomExotic.jpg" alt="#"/>
+                <img class="margin_top_30 img-responsive" th:src="@{/imgs/roomExotic.jpg}" alt="#"/>
                 </a>
                 <h3 class="blog_head">Greek Room</h3>
             </div>
@@ -139,7 +138,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <h3>Booking Online</h3>
+                <h3>Contact us</h3>
             </div>
             <div class="col-md-5">
             </div>
@@ -204,32 +203,5 @@
 </footer>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script>
-    // $(function () {
-    //
-    //     'use strict';
-    //
-    //     var winH = $(window).height();
-    //
-    //     $('header').height(winH);
-    //
-    //     $('header .container > div').css('top', (winH / 2) - ($('header .container > div').height() / 2));
-    //
-    //     $('.navbar ul li a.search').on('click', function (e) {
-    //         e.preventDefault();
-    //     });
-    //     $('.navbar a.search').on('click', function () {
-    //         $('.navbar form').fadeToggle();
-    //     });
-    //
-    //     $('.navbar ul.navbar-nav li a').on('click', function (e) {
-    //
-    //         var getAttr = $(this).attr('href');
-    //
-    //         e.preventDefault();
-    //         $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
-    //     });
-    // })
-</script>
 </body>
 </html>

@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Optional;
 
@@ -30,9 +33,12 @@ public class BookingController {
         return "booking";
     }
     @GetMapping({"/bookinglist"})
-    public String roomlist(Model model, @RequestParam(required = false) String keyword,@RequestParam (required = false) String roomName, @RequestParam(required = false) Date date) {
+    public String roomlist(Model model, @RequestParam(required = false) String keyword,@RequestParam (required = false) String roomName, @RequestParam(required = false) String date) {
        Iterable<Booking> allBooking = bookingRepository.findAllBy();
-       allBooking = bookingRepository.findByfilter(keyword,roomName,date);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate dateTime = LocalDate.parse(date, formatter);
+       allBooking = bookingRepository.findByfilter(keyword,roomName,dateTime);
+
         model.addAttribute("allbookings",allBooking);
         return "bookinglist";
     }

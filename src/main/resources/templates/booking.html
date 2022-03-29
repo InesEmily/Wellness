@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon" href="../imgs/lotus.png">
+    <link rel="icon" type="image/x-icon"  th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
@@ -43,13 +43,13 @@
             <div class="col-md-5">
                 <div class="classForMargin">
                 <div th:if="${booking.get().getRoom().getId() ==1}">
-                    <img th:src="@{../imgs/roomMozaik.jpg}"/>
+                    <img th:src="@{/imgs/roomMozaik.jpg}"/>
                     </div>
                 <div th:if="${booking.get().getRoom().getId() ==2}">
-                    <img th:src="@{../imgs/roomExotic.jpg}"/>
+                    <img th:src="@{/imgs/roomExotic.jpg}"/>
                 </div>
                     <div th:if="${booking.get().getRoom().getId() ==3}">
-                        <img th:src="@{../imgs/smallRoom.jpg}"/>
+                        <img th:src="@{/imgs/smallRoom.jpg}"/>
                     </div>
                 </div>
 
