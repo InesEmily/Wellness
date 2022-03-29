@@ -18,9 +18,11 @@
 
 
 <body>
+<div class="achtergrondClientNew">
+    <div class="white-overlay">
 <div th:replace="fragments/header :: header">Header</div>
 <main>
-    <div class="achtergrondClientNew">
+
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -60,7 +62,11 @@
                 </div>
             </div>
         </div>
-    </div>
 </main>
+        <footer>
+            <div th:replace="fragments/footer :: footer">footer</div>
+        </footer>
+    </div>
+</div>
 </body>
 </html>

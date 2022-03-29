@@ -13,37 +13,41 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon"  th:href="@{/imgs/lotus.png}">
+    <link rel="icon" type="image/x-icon" th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
 
 <div class="achtergrondSauna">
+    <div class="overlay">
 
-    <div id="hiw" class="hiw_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="tarieven">
-                        <h3>Public Sauna</h3>
-                        <h4>HOTPOD Room</h4>
-                        <p>
-                            Voor je bezoek aan de thermen en sauna’s bieden we je verschillende toegangsmogelijkheden:
-                            een volledige dag onbeperkt en uitgebreid genieten of op nomrale weekdagen met avondtarief vanaf 18 uur van maandag tem donderdag,
-                            voldoende dus om gebruik maken van sauna en badhuis en een opgietsessie mee te pikken.
-                            Saunafans zullen zeker genieten van onze voordelige beurtenkaarten en abonnementen.
-                        </p>
+        <div id="hiw" class="hiw_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="tarieven">
+                            <h3>Public Sauna</h3>
+                            <h4>HOTPOD Room</h4>
+                            <p>
+                                Voor je bezoek aan de thermen en sauna’s bieden we je verschillende
+                                toegangsmogelijkheden:
+                                een volledige dag onbeperkt en uitgebreid genieten of op nomrale weekdagen met
+                                avondtarief vanaf 18 uur van maandag tem donderdag,
+                                voldoende dus om gebruik maken van sauna en badhuis en een opgietsessie mee te pikken.
+                                Saunafans zullen zeker genieten van onze voordelige beurtenkaarten en abonnementen.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <footer>
+        <div th:replace="fragments/footer :: footer">footer</div>
+    </footer>
 </div>
-
-
-<footer>
-    <div th:replace="fragments/footer :: footer">footer</div>
-</footer>
 
 </body>
 </html>

@@ -13,35 +13,39 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon"  th:href="@{/imgs/lotus.png}">
+    <link rel="icon" type="image/x-icon" th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
 
 <div class="viproom">
+    <div class="overlay">
 
-    <div id="hiw" class="hiw_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="tarieven">
-                        <h3>VIP Room</h3>
-                        <h4>Golden Room</h4>
-                        <p>
-                            Toe aan een welverdiende vakantie en wilt u optimaal genieten, dan is een VIP room een prima optie!
-                            Naast een sfeervolle inrichting, heeft u de beschikking over een privé-sauna, zonnebank, (bubbel) bad, boxspringbedden,
-                            binnenzwembad, gratis WiFi en vaak opgemaakte bedden bij aankomst. Heerlijk!
-                        </p>
+        <div id="hiw" class="hiw_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="tarieven">
+                            <h3>VIP Room</h3>
+                            <h4>Golden Room</h4>
+                            <p>
+                                Toe aan een welverdiende vakantie en wilt u optimaal genieten, dan is een VIP room een
+                                prima optie!
+                                Naast een sfeervolle inrichting, heeft u de beschikking over een privé-sauna, zonnebank,
+                                (bubbel) bad, boxspringbedden,
+                                binnenzwembad, gratis WiFi en vaak opgemaakte bedden bij aankomst. Heerlijk!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<footer>
-    <div th:replace="fragments/footer :: footer">footer</div>
-</footer>
+    <footer>
+        <div th:replace="fragments/footer :: footer">footer</div>
+    </footer>
+</div>
 
 </body>
 </html>

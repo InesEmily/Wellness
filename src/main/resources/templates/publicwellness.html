@@ -13,34 +13,39 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon"  th:href="@{/imgs/lotus.png}">
+    <link rel="icon" type="image/x-icon" th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div th:replace="fragments/header :: header">Header</div>
 <div class="achtergrondTarieven">
+    <div class="overlay">
 
-    <div id="hiw" class="hiw_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="tarieven">
-                        <h3>Public Wellness</h3>
-                        <h4>Anavarin Room</h4>
-                        <p>
-                            Met niet minder dan 10.000 m² saunaplezier is er voor ieder wat wils en ruimte voor jezelf.
-                            Maak een heuse reis door de wereld van sauna & wellness: het romeins voetenbad, de oosterse relaxatieruimte,
-                            de arabische, de finse, de thaise en de panoramasauna, de marokkaanse scrub- & verzorgingsruimte, het turkse stoombad en de infraroodsauna.
-                            Droom weg in onze bijzonder veelzijdige wellnessperiferie van jacuzzi's, neveldouches en veel meer
-                        </p>
+        <div id="hiw" class="hiw_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="tarieven">
+                            <h3>Public Wellness</h3>
+                            <h4>Anavarin Room</h4>
+                            <p>
+                                Met niet minder dan 10.000 m² saunaplezier is er voor ieder wat wils en ruimte voor
+                                jezelf.
+                                Maak een heuse reis door de wereld van sauna & wellness: het romeins voetenbad, de
+                                oosterse relaxatieruimte,
+                                de arabische, de finse, de thaise en de panoramasauna, de marokkaanse scrub- &
+                                verzorgingsruimte, het turkse stoombad en de infraroodsauna.
+                                Droom weg in onze bijzonder veelzijdige wellnessperiferie van jacuzzi's, neveldouches en
+                                veel meer
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+        <div th:replace="fragments/footer :: footer">footer</div>
+    </footer>
 </div>
-
-<footer>
-    <div th:replace="fragments/footer :: footer">footer</div>
-</footer>
 </body>
 </html>

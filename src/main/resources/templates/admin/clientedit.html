@@ -16,78 +16,82 @@
     <link rel="icon" type="image/x-icon" href="/imgs/lotus.png">
 </head>
 <body>
-<header>
-    <div th:replace="fragments/header :: header">Header</div>
-</header>
 <div class="achtergrondClientNew">
-<main>
-    <form th:action="@{|/admin/clientedit/${client.id}|}" th:object="${client}" method="post">
-        <div class="container">
-            <div class="row" th:if="${client}">
-                <div class="col-md-5">
-                    <a th:href="@{|/client/*{id}|}" class="buttonLook smallButton">cancel</a>
-                    <a th:href="@{|/admin/clientnew|}" class="buttonLook smallButton">New</a>
-                </div>
-                <div class="col-md-5">
-                    <label for="clientName" class="filtername"></label>
-                    <input type="text" id="clientName" name="clientName" class="form-control rounded"
-                           th:field="*{name}" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <span class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></span>
+    <div class="white-overlay">
+        <header>
+            <div th:replace="fragments/header :: header">Header</div>
+        </header>
 
-                    <input type="text" id="clientLastname" name="clientLastname" class="form-control rounded"
-                           th:field="*{lastName}" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <span class="input-group-text border-0" id="clientLastname-addon"><i
-                            class="fas fa-search"></i></span>
+        <main>
+            <form th:action="@{|/admin/clientedit/${client.id}|}" th:object="${client}" method="post">
+                <div class="container">
+                    <div class="row" th:if="${client}">
+                        <div class="col-md-5">
+                            <a th:href="@{|/client/*{id}|}" class="buttonLook smallButton">cancel</a>
+                            <a th:href="@{|/admin/clientnew|}" class="buttonLook smallButton">New</a>
+                        </div>
+                        <div class="col-md-5">
+                            <label for="clientName" class="filtername"></label>
+                            <input type="text" id="clientName" name="clientName" class="form-control rounded"
+                                   th:field="*{name}" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="search-addon"><i
+                                    class="fas fa-search"></i></span>
 
-                    <input type="text" id="clientEmail" name="clientEmail" class="form-control rounded"
-                           th:field="*{email}" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <span class="input-group-text border-0" id="clientEmail-addon"><i class="fas fa-search"></i></span>
+                            <input type="text" id="clientLastname" name="clientLastname" class="form-control rounded"
+                                   th:field="*{lastName}" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="clientLastname-addon"><i
+                                    class="fas fa-search"></i></span>
 
-                    <input type="text" id="clientphone" name="clientphone" class="form-control rounded"
-                           th:field="*{phoneNumber}" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <span class="input-group-text border-0" id="clientphone-addon"><i class="fas fa-search"></i></span>
+                            <input type="text" id="clientEmail" name="clientEmail" class="form-control rounded"
+                                   th:field="*{email}" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="clientEmail-addon"><i class="fas fa-search"></i></span>
 
-                    <input type="text" id="clientgender" name="clientgender" class="form-control rounded"
-                           th:field="*{gender}" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <span class="input-group-text border-0" id="clientgender-addon"><i class="fas fa-search"></i></span>
+                            <input type="text" id="clientphone" name="clientphone" class="form-control rounded"
+                                   th:field="*{phoneNumber}" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="clientphone-addon"><i class="fas fa-search"></i></span>
 
-                    <input type="text" id="clientHouseNumber" name="clientHouseNumber" class="form-control rounded"
-                           th:field="*{housenumber}" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <span class="input-group-text border-0" id="clientHouseNumber-addon"><i
-                            class="fas fa-search"></i></span>
+                            <input type="text" id="clientgender" name="clientgender" class="form-control rounded"
+                                   th:field="*{gender}" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="clientgender-addon"><i
+                                    class="fas fa-search"></i></span>
 
-                    <input type="text" id="clientStreet" name="clientStreet" class="form-control rounded"
-                           th:field="*{street}" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <span class="input-group-text border-0" id="clientStreet-addon"><i class="fas fa-search"></i></span>
+                            <input type="text" id="clientHouseNumber" name="clientHouseNumber"
+                                   class="form-control rounded"
+                                   th:field="*{housenumber}" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="clientHouseNumber-addon"><i
+                                    class="fas fa-search"></i></span>
 
-                    <input type="text" id="clientPostalcode" name="clientPostalcode" class="form-control rounded"
-                           th:field="*{postalcode}" aria-label="Search"
-                           aria-describedby="search-addon"/>
-                    <span class="input-group-text border-0" id="clientPostalcode-addon"><i
-                            class="fas fa-search"></i></span>
+                            <input type="text" id="clientStreet" name="clientStreet" class="form-control rounded"
+                                   th:field="*{street}" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="clientStreet-addon"><i
+                                    class="fas fa-search"></i></span>
 
-                    <div class="infoLine">
-                        <input type="submit" value="save" class="buttonLook smallButton">
+                            <input type="text" id="clientPostalcode" name="clientPostalcode"
+                                   class="form-control rounded"
+                                   th:field="*{postalcode}" aria-label="Search"
+                                   aria-describedby="search-addon"/>
+                            <span class="input-group-text border-0" id="clientPostalcode-addon"><i
+                                    class="fas fa-search"></i></span>
+
+                            <div class="infoLine">
+                                <input type="submit" value="save" class="buttonLook smallButton">
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-            </div>
-        </div>
-
-
-    </form>
-</main>
-
-<footer>
-    <div th:replace="fragments/footer :: footer">footer</div>
-</footer>
+            </form>
+        </main>
+        <footer>
+            <div th:replace="fragments/footer :: footer">footer</div>
+        </footer>
+    </div>
 </div>
 </body>
 

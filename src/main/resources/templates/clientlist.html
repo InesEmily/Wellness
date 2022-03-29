@@ -16,9 +16,11 @@
     <link rel="icon" type="image/x-icon" th:href="@{/imgs/lotus.png}">
 </head>
 <body>
+<div class="achtergrondClientNew">
+    <div class="white-overlay">
 <div th:replace="fragments/header :: header">Header</div>
 <main>
-    <div class="achtergrondClientNew">
+
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -71,9 +73,9 @@
                 </div>
             </div>
         </div>
-    </div>
 </main>
-
+    </div>
+</div>
 <footer>
     <div th:replace="fragments/footer :: footer">footer</div>
 </footer>

@@ -887,7 +887,8 @@ footer .copyright p {
     padding: 40px 50px;
     box-shadow: 50px 50px 0 0 #fcf8e3;
 }
-.testimonial_blog h1{
+
+.testimonial_blog h1 {
     color: gold;
 }
 
@@ -1187,6 +1188,7 @@ footer .item h4 {
     }
 
     .testimonial_blog p:first-child {
+
         font-size: 30px;
         font-weight: 500;
         margin-bottom: 10px;
@@ -1241,7 +1243,7 @@ footer .item h4 {
 
 }
 
-.table-client{
+.table-client {
     display: inline-block;
     width: 100%;
     align-content: center;
@@ -1265,31 +1267,36 @@ a.buttonLook:active {
     background-color: gold;
     color: #0c2326;
 }
+
 a.mediumButton {
     margin: 10px auto;
     width: 400px;
     font-size: 1.2em;
     padding: 1em;
 }
+
 a.smallButton {
     display: block;
     font-size: 1em;
     padding: 0.5em;
     margin-top: 25px;
 }
-.achtergrondTarieven{
+
+.achtergrondTarieven {
     background-image: url("../imgs/white_room.jpg");
     width: 100%;
     height: 100%;
     color: white;
 }
-.achtergrondClientNew{
+
+.achtergrondClientNew {
     background-image: url("../imgs/clientNewPage.jpg");
     width: 100%;
     height: 100%;
     color: black;
     background-repeat: no-repeat;
 }
+
 .prevButtonDiv {
     position: fixed;
     left: 10px;
@@ -1302,38 +1309,47 @@ a.smallButton {
     top: 200px;
 
 }
-.client{
+
+.client {
     margin: 10px;
 }
-.achtergrondSauna{
+
+.achtergrondSauna {
     background-image: url("../imgs/Wellness.jpg");
     width: 100%;
     height: 100%;
     color: white;
 }
-.viproom{
+
+.viproom {
     background-image: url("../imgs/gold_room.jpg");
     width: 100%;
     height: 100%;
     color: white;
 }
-.viproom h4, .achtergrondSauna h4, .achtergrondTarieven h4{
+
+.viproom h4, .achtergrondSauna h4, .achtergrondTarieven h4 {
     color: gold;
 }
-.classForMargin{
+
+.classForMargin {
     margin-bottom: 10px;
 }
-.marginClass{
+
+.marginClass {
     margin-top: 20px;
 }
-.marginside{
+
+.marginside {
     margin-right: 20px;
     margin-left: 20px;
 }
-#teachers.h3{
-    position: fixed;
-    left: -50px;
+
+
+.tarieven h3{
+    color: white;
 }
+
 
 
 
