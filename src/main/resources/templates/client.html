@@ -55,13 +55,15 @@
                         </div>
 
 
-                        <div class="col-md-6" id="teachers">
+
+                        <div th:if="${!client.getPersonnels().isEmpty()}" class="col-md-6" id="teachers" >
                             <h2>Teachers :</h2>
                             <div th:each=" personnel: ${client.getPersonnels()}">
+
                                 <a class="buttonLook mediumButton"
                                    th:href="@{|/personneldetails/${personnel.getId()}|}"
                                    th:text="|${personnel.getName()} ${personnel.getLastName()}|">personnel name</a>
-                            </div>
+                        </div>
                         </div>
                     </div>
                     <div class="row">

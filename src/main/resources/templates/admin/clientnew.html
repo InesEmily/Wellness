@@ -12,8 +12,10 @@
           th:href="@{/css/bootstrap.bundle.min.js}"/>
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
+
+
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon" href="/imgs/lotus.png">
+    <link rel="icon" type="image/x-icon" th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div class="achtergrondClientNew">
@@ -44,13 +46,14 @@
                             <span class="input-group-text border-0" id="clientLastname-addon"><i
                                     class="fas fa-search"></i></span>
 
-                            <input type="text" id="clientBirthday" name="clientBirthday" class="form-control rounded"
+                            <input type="date" id="clientBirthday" name="clientBirthday" class="form-control rounded"
                                    th:field="*{birthday}" aria-label="Search"
                                    aria-describedby="search-addon" placeholder="yyyy-MM-dd" required/>
                             <span class="input-group-text border-0" id="clientBirthday-addon"><i
                                     class="fas fa-search"></i></span>
 
-                            <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                    title="Please Enter Valid Email Id" id="clientEmail" name="clientEmail"
                                    class="form-control rounded"
                                    th:field="*{email}" aria-label="Search"
@@ -58,7 +61,7 @@
                             <span class="input-group-text border-0" id="clientEmail-addon"><i
                                     class="fas fa-search"></i></span>
 
-                            <input type="text" id="clientphone" name="clientphone" class="form-control rounded"
+                            <input type="tel" id="clientphone" name="clientphone" class="form-control rounded"
                                    placeholder="Phone number"
                                    th:field="*{phoneNumber}" aria-label="Search"
                                    aria-describedby="search-addon" required minlength="10" maxlength="10" size="10"/>
@@ -71,7 +74,7 @@
                             <label for="female">F</label>
                             <input type="radio" id="female" name="gender" value="F" th:field="*{gender}">
 
-                            <input type="text" id="clientHouseNumber" name="clientHouseNumber"
+                            <input type="number" id="clientHouseNumber" name="clientHouseNumber"
                                    class="form-control rounded"
                                    th:field="*{housenumber}" aria-label="Search"
                                    aria-describedby="search-addon" placeholder="Housenumber" required/>
@@ -88,7 +91,7 @@
                                    class="form-control rounded "
                                    placeholder="Postal code"
                                    th:field="*{postalcode}" aria-label="Search"
-                                   aria-describedby="search-addon" required minlength="4" maxlength="4" size="4"/>
+                                   aria-describedby="search-addon" onfocus=this.value='' required minlength="4" maxlength="4" size="4"/>
                             <span class="input-group-text border-0" id="clientPostalcode-addon"><i
                                     class="fas fa-search"></i></span>
                             <div class="marginClass">
@@ -106,5 +109,6 @@
         </footer>
     </div>
 </div>
+
 </body>
 </html>

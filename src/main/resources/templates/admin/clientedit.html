@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all"
           th:href="@{/css/style.css}"/>
     <title>Zensational</title>
-    <link rel="icon" type="image/x-icon" href="/imgs/lotus.png">
+    <link rel="icon" type="image/x-icon" th:href="@{/imgs/lotus.png}">
 </head>
 <body>
 <div class="achtergrondClientNew">
@@ -27,8 +27,8 @@
                 <div class="container">
                     <div class="row" th:if="${client}">
                         <div class="col-md-5">
-                            <a th:href="@{|/client/*{id}|}" class="buttonLook smallButton">cancel</a>
-                            <a th:href="@{|/admin/clientnew|}" class="buttonLook smallButton">New</a>
+                            <a th:href="@{|/client/*{id}|}" class="buttonLook smallButton">CANCEL</a>
+                            <a th:href="@{|/admin/clientnew|}" class="buttonLook smallButton">NEW</a>
                         </div>
                         <div class="col-md-5">
                             <label for="clientName" class="filtername"></label>
@@ -51,7 +51,7 @@
 
                             <input type="text" id="clientphone" name="clientphone" class="form-control rounded"
                                    th:field="*{phoneNumber}" aria-label="Search"
-                                   aria-describedby="search-addon"/>
+                                   aria-describedby="search-addon" onfocus="this.value=''" value="Phone number"/>
                             <span class="input-group-text border-0" id="clientphone-addon"><i class="fas fa-search"></i></span>
 
                             <input type="text" id="clientgender" name="clientgender" class="form-control rounded"
@@ -63,7 +63,7 @@
                             <input type="text" id="clientHouseNumber" name="clientHouseNumber"
                                    class="form-control rounded"
                                    th:field="*{housenumber}" aria-label="Search"
-                                   aria-describedby="search-addon"/>
+                                   aria-describedby="search-addon" onfocus="this.value=''" value="Housenumber"/>
                             <span class="input-group-text border-0" id="clientHouseNumber-addon"><i
                                     class="fas fa-search"></i></span>
 
@@ -76,7 +76,7 @@
                             <input type="text" id="clientPostalcode" name="clientPostalcode"
                                    class="form-control rounded"
                                    th:field="*{postalcode}" aria-label="Search"
-                                   aria-describedby="search-addon"/>
+                                   aria-describedby="search-addon" onfocus="this.value=''" value="Postal code"/>
                             <span class="input-group-text border-0" id="clientPostalcode-addon"><i
                                     class="fas fa-search"></i></span>
 
