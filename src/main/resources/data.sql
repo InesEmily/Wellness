@@ -87,5 +87,7 @@ INSERT INTO "PUBLIC"."BOOKING" VALUES
                                    (22, DATE '2022-03-26', TIME '22:00:00', 7, 3),
                                    (23, DATE '2022-03-27', TIME '22:00:00', 5, 2),
                                    (24, DATE '2022-03-27', TIME '18:00:00', 1, 2);
+INSERT INTO "PUBLIC"."USER" VALUES
+    (nextval('USER_SEQ'), 'admin', 'admin', 'admin');
 
 

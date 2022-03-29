@@ -16,6 +16,7 @@ public class Client {
     private String name;
     private String lastName;
     private String gender;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate birthday;
     private int phoneNumber;
     private String street;

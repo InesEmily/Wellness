@@ -62,7 +62,7 @@ public class AdminController {
     public String clientNewPost(Model model,@ModelAttribute("client")Client client){
         clientRepository.save(client);
         int id = clientRepository.save(client).getId();
-        return "redirect:/client"+id;
+        return "redirect:/client/"+id;
     }
 
 

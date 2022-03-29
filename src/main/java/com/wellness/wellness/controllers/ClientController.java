@@ -58,9 +58,4 @@ public class ClientController {
     }
 
 
-    public int calculateAge(Client client) {
-        System.out.println(Period.between(client.getBirthday(), LocalDate.now()).getYears());
-        return Period.between(client.getBirthday(), LocalDate.now()).getYears();
-    }
-
 }
