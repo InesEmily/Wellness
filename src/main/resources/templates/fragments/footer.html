@@ -47,7 +47,7 @@
                 <h4 class="text-uppercase">Discover</h4>
                 <ul>
                     <li><a th:href="@{/contact}">Contact Us</a></li>
-                    <li>
+                    <li  sec:authorize="!isAuthenticated()">
                         <button type="button" class="btn btn-outline-warning"><a th:href="@{/login}">Login</a></button>
                     </li>
                     <li  sec:authorize="isAuthenticated()">
