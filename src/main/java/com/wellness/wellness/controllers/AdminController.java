@@ -27,7 +27,7 @@ public class AdminController {
         logger.info("partyEdit" + id);
         final Iterable<Booking> bookings = bookingRepository.findAll();
         model.addAttribute("booking", bookings);
-        return "/admin/clientedit";
+        return "admin/clientedit";
     }
 
     @PostMapping("/clientedit/{id}")
